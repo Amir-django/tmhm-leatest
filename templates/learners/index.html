@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="codepixer">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <link href="{% static 'LandingPage/img/logotiny.png' %}" rel="icon">
+    <title>Learner</title>
+
+    <!--
+			Google Font
+            ============================================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500i" rel="stylesheet">
+
+    <!--
+			CSS
+			============================================= -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css">
+    <link rel="stylesheet" href="{% static 'learners/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'learners/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'learners/css/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'learners/css/magnific-popup.css'%}">
+    <link rel="stylesheet" href="{% static 'learners/css/nice-select.css'%}">
+    <link rel="stylesheet" href="{% static 'learners/css/animate.min.css'%}">
+    <link rel="stylesheet" href="{% static 'learners/css/owl.carousel.css'%}">
+    <link rel="stylesheet" href="{% static 'learners/css/main.css'%}">
+    <style>
+    body,html {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: Raleway;
+    }
+    .img-area{
+        margin: auto;
+        overflow: hidden;
+        align-items: center;
+    }
+    .img-area img{
+        height: 400px;
+        width: 500px;
+    }
+    .carousel-caption{
+        position: static;
+        padding-bottom: 15px;
+        padding-top: 0;
+    }
+    .carousel-caption h4{
+        font-size: 20px;
+    }
+    #navbar-left a{
+        text-decoration: none;
+        color: #ababab;
+    }
+    #navbar-left a:hover{
+        color: black;
+    }
+    #navbar-left button{
+        color: white;
+    }
+    footer{
+        background: #eeeeee;
+        color:#757575;
+        font-size: 13px;
+        line-height: 1.2
+    }
+    footer h6{
+        color: #9e9e9e;
+    }
+    footer a{
+        color: black;
+    }
+    footer a:link{
+        text-decoration: none;
+    }
+    footer a:hover{
+        color: #757575;
+    }
+    footer #social i{
+        color: black;
+        font-size: 1.2rem;
+    }
+    footer #social i:hover{
+        color: #3db166;
+    }
+    @media (max-width: 768px) {
+        #navbar-left{
+            display: block;
+        }
+        #first {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            line-height: 12px;
+        }
+        .container-fluid{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .section-a img{
+            padding: 0;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 990px){
+        #navbar-left{
+            display: block;
+        }
+        #navbar-left form{
+            display: none;
+        }
+        .section-a{
+            margin-bottom: 32px;
+        }
+        .section-a img{
+            margin: 32px;
+        }
+        .section-a #section-a-learn h2,h3{
+            font-size: 31px;
+        }
+        .section-a #section-a-learn h4{
+            font-size: 15px;
+        }
+        #query{
+            margin-left: 11em;
+        }
+        #query_request{
+            text-align: center !important;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 375px){
+        #query{
+            margin-left: 0 !important;
+        }
+    }
+    @media all and (max-width: 765px){
+        footer{
+            font-size: 1rem;
+        }
+        #query{
+            margin-left: 1.5em;
+        }
+        #footer-left{
+            padding-left: 3em;
+            text-align: left;
+        }
+    }
+    
+
+    @media only screen and (max-width: 1080px){
+        #request{
+            align-items: center;
+            justify-content: center;
+            text-align:center;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- Start Header Area -->
+    <!-- navbar  -->
+     
+    <figure class="figure" style="margin-right: 11px;margin-top: 18px;margin-bottom: 11px;margin-left: 15px;">
+        <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;">
+        <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+    </figure>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #f7f7f7;">
+        <div class="container">
+            <a class="navbar-brand" href="/home"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampl">
+                        Free Content
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav justify-content-end text-sm-left" id="navbar-left">
+                   
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" style="padding-left: 0;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/signup" class="btn btn-primary rounded" style="color: white">Sign Up</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+    <!-- End Header Area -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-size: 13px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel"><strong>Sign In</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form style="padding-right: 80px; padding-left: 80px;">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address / Phone Number">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" data-toggle="password" placeholder="Password" id="password-field">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <p style="font-size: 8.5px">By clicking Sign In, you agree to our <a href="/hpme">Terms of Use</a> and our <a href="/home">Privacy Policy.</a></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="font-size: 12px">SIGN IN</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Start Banner Area -->
+    <section class="banner-area relative" style="background: linear-gradient(to bottom, rgba(115, 228, 243, 0.822), rgba(89, 126, 226, 0.73)), url('{% static 'learners/img/learning.jpg'%}') no-repeat top center;">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                    <h1 class="text-white">
+                        Looking for <span style="background-color: rgb(13, 13, 128);color: cornsilk;">Courses?</span>
+                    </h1>
+                    <p>You are at the right place. Welcome to a smooth & hassle-free learning environment</p>
+                    <a href="/signup" class="primary-btn white">Buckle Up!</a>
+
+                </div>
+            </div>
+        </div>
+
+    </section><br>
+    <!-- End Banner Area -->
+
+
+
+    <section id="courses" class="ftco-section" style="margin-top:60px;margin-bottom: 40px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 d-flex ftco-animate" style=" box-shadow: 5px 5px 5px #aaaaaa; ">
+                    <div class="course align-self-stretch">
+                        <a href="#" class="img" style="background-image: url()"></a>
+                        <div class="text p-4">
+                            <p class="category"><span>English Speaking</span> <span class="price">Free</span></p>
+                            <h3 class="mb-3"><a href="#">English for Tommorow</a></h3>
+                            <p>Build up fluent english speaking skills and boost up your career.</p>
+                            <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate" style=" box-shadow: 5px 5px 5px #aaaaaa; ">
+                    <div class="course align-self-stretch">
+                        <a href="#" class="img" style="background-image: url()"></a>
+                        <div class="text p-4">
+                            <p class="category"><span>Science</span> <span class="price">Free</span></p>
+                            <h3 class="mb-3"><a href="#">Computer Engineering</a></h3>
+                            <p>Learn python basics and programming from scratch to pro with this course.</p>
+                            <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex ftco-animate" style=" box-shadow: 5px 5px 5px #aaaaaa; ">
+                    <div class="course align-self-stretch">
+                        <a href="#" class="img" style="background-image: url()"></a>
+                        <div class="text p-4">
+                            <p class="category"><span></span> <span class="price">Free</span></p>
+                            <h3 class="mb-3"><a href="#">Cracking interviews</a></h3>
+
+                            <p>Develop your communication skills and learn to prepare for important interviews.</p>
+                            <p><a href="#" class="btn btn-primary">Enroll now!</a></p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+    </section>
+
+    <!-- Start Courses Area -->
+    <section id="field" class="courses-area section-gap" style="background-image:url('{% static 'learners/img/header-bg.png'%}');opacity: 0.9;">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-5 about-right" style="padding-top:4px;padding-left: 10px;">
+                    <h1>
+                        <span style="background-color: aliceblue;color: black;"> Training</span> you <br> for the challenges.
+                    </h1>
+                    <div class="wow fadeIn" data-wow-duration="1s">
+                        <p style="color: aliceblue;">
+                            Dive deep into the ocean of knowledge and learn what excites you.
+
+                    </div>
+                    <a href="#" class="primary-btn white">Enroll Now</a>
+
+                </div>
+                <div class="offset-lg-1 col-lg-6">
+                    <div class="courses-right">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <ul class="courses-list">
+                                    <li>
+                                        <a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".1s">
+                                            <i class="fa fa-book"></i> <br> Business
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".3s">
+                                            <i class="fa fa-book"></i> <br> IT & Software
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="wow fadeInLeft" href="#" data-wow-duration="1s" data-wow-delay=".5s">
+                                            <i class="fa fa-book"></i> <br> Personal Development
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <ul class="courses-list">
+                                    <li>
+                                        <a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay="1.3s">
+                                            <i class="fa fa-book"></i> <br> Health,Fitness & Lifestyle
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay="1.1s">
+                                            <i class="fa fa-book"></i> <br> Creative Fields
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="wow fadeInRight" href="#" data-wow-duration="1s" data-wow-delay=".9s">
+                                            <i class="fa fa-book"></i> <br> Teaching/Coaching
+                                        </a>
+                                    </li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Courses Area -->
+
+    <!--Start Feature Area -->
+    <section class="feature-area">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title text-center">
+                        <h1>Determined to help you unfold a better career!</h1>
+                        <p>
+                            We offer a variety of courses ranging from academic courses to all the trending courses to help you pace with upcoming trends. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-inner row">
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="ti-briefcase"></i>
+                        <h4>Internships</h4>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                            <p>
+                                We provide internships in certain selected areas. After you complete a particular course successfully, you will get to access various internship opportunities. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="ti-crown"></i>
+                        <h4>Courses</h4>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
+                            <p>
+                                You can enroll in any course by paying nominal fees. After the completion of the course,  you will be issued a certificate of completion. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="ti-medall-alt"></i>
+                        <h4>Easy Enrollment</h4>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            <p>
+                                You can enroll in any course by paying nominal fees.If you have cancelled your enrollment in any course then your refund will be initiated within 7 working days.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="ti-key"></i>
+                        <h4>Lifetime Access</h4>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
+                            <p>
+                                It is very important that you set up your profile with the right information as we will be issuing your certificate clearly on the details mentioned in your profile.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="ti-files"></i>
+                        <h4>Interactive Learning</h4>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".3s">
+                            <p>
+                                Our facilitators are full of knowledge and expertise. They will assist you in identifying the opportunities and tackling problems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item">
+                        <i class="ti-headphone-alt"></i>
+                        <h4>Live Guidance</h4>
+                        <div class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
+                            <p>
+                                Learners can now also request for online counseling at any time by following some easy steps. Our executive will contact in a short while.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Feature Area -->
+
+
+
+    <!-- footer start  -->
+    <footer class="page-footer font-small pt-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left pb-3" style="background: transparent;">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <figure class="figure" style="margin: 11px;">
+                    <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;width: 60px; height: 40px;">
+                    <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+                </figure>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <p>
+                <a href="/aboutus">About Us</a>
+                </p>
+                <p>
+                <a href="#!">Career</a>
+                </p>
+                <p>
+                <a href="/contact">Contact Us</a>
+                </p>
+                <p>
+                <a href="/terms-and-services">Terms/Services</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto" id="footer-left">
+                <br>
+                <p>
+                <a href="#!">Learners</a>
+                </p>
+                <p>
+                <a href="/facilitator">Facilitators</a>
+                </p>
+                <p>
+                <a href="/campus">Campus</a>
+                </p>
+                <p>
+                <a href="#!">Corporates</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 social" id="footer-left">
+            <h6 class="text-uppercase font-weight-bold">Our App</h6>
+            <hr class="mb-2 mt-0 d-inline-block mx-auto" style="width: 20px;">
+            <p>
+            <a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple mr-1" style="font-size: 20px;"></i> IOS Store</a>
+            </p>
+            <p>
+            <a href="https://play.google.com/store"><img class="mr-1" src="{% static 'LandingPage/img/play-store.svg' %}" width="20px" height="20px"> Andriod Store</a>
+            </p>
+        </div>
+
+    </div>
+
+
+        <hr class="mb-4 mt-0 d-inline-block mx-auto text-sm-lef" style="width: 100%; height: 1px; background-color: #3db166;">
+
+        <div class="row d-flex align-items-center">
+
+        <div class="col-md-7 col-lg-8">
+            <p class="text-center text-md-left text-sm-left">© 2020 Copyright:
+            <a href="#" style="font-size:11px">
+                <strong> TMHM Consulting Services Pvt.Ltd</strong>
+            </a>
+            </p>
+        </div>
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+            <div class="text-center text-md-right text-sm-left" id="social">
+
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-wordpress"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-facebook-f"></i>
+                </a>
+                </li>
+            </ul>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</footer>
+
+    <!-- ####################### Start Scroll to Top Area ####################### -->
+   
+    <!-- ####################### End Scroll to Top Area ####################### -->
+    <script src="{% static 'learners/js/vendor/jquery-2.2.4.min.js'%}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="{% static 'learners/js/vendor/bootstrap.min.js'%}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'learners/js/easing.min.js'%}"></script>
+    <script src="{% static 'learners/js/hoverIntent.js'%}"></script>
+    <script src="{% static 'learners/js/superfish.min.js'%}"></script>
+    <script src="{% static 'learners/js/jquery.ajaxchimp.min.js'%}"></script>
+    <script src="{% static 'learners/js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'learners/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'learners/js/owl-carousel-thumb.min.js'%}"></script>
+    <script src="{% static 'learners/js/jquery.sticky.js'%}"></script>
+    <script src="{% static 'learners/js/jquery.nice-select.min.js'%}"></script>
+    <script src="{% static 'learners/js/parallax.min.js'%}"></script>
+    <script src="{% static 'learners/js/waypoints.min.js'%}"></script>
+    <script src="{% static 'learners/js/wow.min.js'%}"></script>
+    <script src="{% static 'learners/js/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'learners/js/mail-script.js'%}"></script>
+    <script src="{% static 'learners/js/main.js'%}"></script>
+    
+     <script>
+      $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+
+            $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+        });
+    </script>
+</body>
+
+</html>

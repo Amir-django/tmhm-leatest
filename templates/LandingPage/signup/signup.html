@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Sign Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'LandingPage/css/signup.css' %}">
+</head>
+<style>
+body{
+    overflow-x: hidden;
+}
+#regForm h3,h5{
+    color: #2e3d49;
+    font-weight: 300 !important;
+}
+@media all and (max-width: 450px){
+    #signup-icon{
+        text-align: center !important;
+    }
+}
+@media all and (max-width: 768px){
+    #dash img{
+        width: 20%;
+        height: 2px;
+    }
+}
+</style>
+<body>
+<header class="shadow pb-2 mb-4 bg-white rounded">
+    <h6 class="text-uppercase font-weight-bold text-center mt-4" style="font-size: 13px;"><img src="{% static 'LandingPage/img/logotiny.png' %}" style="width: 30px; height: 30px;"></h6>
+</header>  
+
+<div class="container">
+    <div class="border border-grey" id="regForm" style="margin-top: 10px;margin-bottom: 20px; padding-top: 15px; font-family: sans-serif">
+        <h3 class="text-center">Create Your Account</h3>
+        <h5 class="text-center">Build your future with us</h5>
+    
+        <p class="mt-2 mb-4 text-center" id="dash"><img src="{% static 'LandingPage/img/line2.png' %}"><img src="{% static 'LandingPage/img/line2.png' %}"></p>
+        
+        <div class="container">
+            <form acton="" method="post" onSubmit = "return checkPassword(this)">
+                {% csrf_token %}
+
+                <div class="form-row"> 
+                    <div class="form-group col-md-6">
+                        <input type="text" class="form-control" id="fname" placeholder="First Name"> 
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control"  id="lnmae" placeholder="Last Name">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="youreamil" aria-describedby="emailHelp" placeholder="Email address"> 
+                </div>
+
+                <div class="form-row"> 
+                    <div class="form-group col-md-6">
+                        <div class="input-group">
+                            <input type="password" class="form-control" data-toggle="password"  id="password-field" name="password1" placeholder="Password"> 
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <div class="input-group">
+                            <input type="password" class="form-control" data-toggle="password"  id="confirm-password-field" name="password2" placeholder="Confirm Password"> 
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                <span toggle="#confirm-password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p style="font-size: 8.5px">By clicking Sign In, you agree to our <a href="/hpme">Terms of Use</a> and our <a href="/home">Privacy Policy.</a></p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" style="font-size: 12px">SIGN UP</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script>
+    $(".custom-file-input").on("change", function() {
+        var fileName = $(this).val().split("\\").pop();
+        $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+
+        $(".toggle-password").click(function() {
+
+        $(this).toggleClass("fa-eye fa-eye-slash");
+        var input = $($(this).attr("toggle"));
+        if (input.attr("type") == "password") {
+        input.attr("type", "text");
+        } else {
+        input.attr("type", "password");
+        }
+    });
+
+    function checkPassword(form) { 
+        password1 = form.password1.value; 
+        password2 = form.password2.value; 
+
+        if (password1 == '') 
+            alert ("Please enter Password"); 
+                
+        else if (password2 == '') 
+            alert ("Please enter confirm password"); 
+                   
+        else if (password1 != password2) { 
+            alert ("\nPassword did not match: Please try again...") 
+            return false; 
+        } 
+        else{ 
+            return true; 
+        } 
+    }
+
+</script>
+</body>
+</html>
+    

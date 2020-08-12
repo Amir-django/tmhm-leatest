@@ -1,0 +1,436 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. About
+4. Milestones
+5. Why choose us
+6. Team
+
+
+
+******************************/
+
+/***********
+1. Fonts
+***********/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Oswald:400,500,600,700');
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background: #FFFFFF;
+	color: #a5a5a5;
+}
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1{font-size: 72px;}
+h2{font-size: 48px;}
+h3{font-size: 36px;}
+h4{font-size: 24px;}
+h5{font-size: 18px;}
+h1, h2, h3, h4, h5, h6
+{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
+.form-control
+{
+	color: #db5246;
+}
+section
+{
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+}
+.clear
+{
+	clear: both;
+}
+.clearfix::before, .clearfix::after
+{
+	content: "";
+	display: table;
+}
+.clearfix::after
+{
+	clear: both;
+}
+.clearfix
+{
+	zoom: 1;
+}
+.float_left
+{
+	float: left;
+}
+.float_right
+{
+	float: right;
+}
+.trans_200
+{
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.trans_300
+{
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.trans_400
+{
+	-webkit-transition: all 400ms ease;
+	-moz-transition: all 400ms ease;
+	-ms-transition: all 400ms ease;
+	-o-transition: all 400ms ease;
+	transition: all 400ms ease;
+}
+.trans_500
+{
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.fill_height
+{
+	height: 100%;
+}
+.super_container
+{
+	width: 100%;
+	overflow: hidden;
+}
+.prlx_parent
+{
+	overflow: hidden;
+}
+.prlx
+{
+	height: 130% !important;
+}
+.parallax-window
+{
+    min-height: 400px;
+    background: transparent;
+}
+.parallax_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.background_image
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.nopadding
+{
+	padding: 0px !important;
+}
+.section_subtitle
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	color: #72728c;
+	line-height: 0.75;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+.section_title
+{
+	color: #181818;
+	margin-top: 26px;
+}
+.button
+{
+	width: 161px;
+	height: 52px;
+	background: rgba(24,24,24,1);
+	text-align: center;
+	border-radius: 20px;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.button a
+{
+	display: block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	line-height: 52px;
+}
+.button:hover
+{
+	background: rgba(24,24,24,0.7);
+}
+
+
+/*********************************
+7. About
+*********************************/
+
+.about
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 10px;
+    padding-bottom: 10px;
+}
+.about_row
+{
+	margin-top: 30px;
+}
+.about_content
+{
+	width: 100%;
+	margin-top: -7px;
+}
+.text_highlight
+{
+	font-size: 18px;
+	font-weight: 700;
+	color: #181818;
+	line-height: 1.66;
+}
+.about_text
+{
+	margin-top: 10px;
+}
+.about_button
+{
+	margin-top: 30px;
+}
+.about_image
+{
+	width: 100%;
+}
+.about_image img
+{
+	max-width: 100%;
+}
+
+/*********************************
+8. Milestones
+*********************************/
+
+.milestones
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.milestone
+{
+	width: 100%;
+}
+.milestone_icon
+{
+	display: inline-block;
+	height: 82px;
+	width: 82px;
+}
+.milestone_icon img
+{
+	max-width: 100%;
+}
+.milestone_counter
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
+	font-weight: 500;
+	color: #181818;
+	line-height: 0.75;
+	margin-top: 35px;
+}
+.milestone_text
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: #838383;
+	margin-top: 31px;
+	line-height: 0.75;
+}
+
+/*********************************
+9. Why choose us
+*********************************/
+
+.why
+{
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.why .section_subtitle,
+.why .section_title
+{
+	color: #FFFFFF;
+}
+.why_row
+{
+	margin-top: 50px;
+}
+.why_item
+{
+	width: 100%;
+	background: #FFFFFF;
+}
+.why_image
+{
+	width: 100%;
+}
+.why_image img
+{
+	max-width: 100%;
+}
+.why_content
+{
+	padding-top: 48px;
+	padding-bottom: 55px;
+	
+}
+.why_title
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+	color: #181818;
+	line-height: 1.1;
+}
+.why_text
+{
+	margin-top: 20px;
+}
+.why_icon
+{
+	position: absolute;
+	top: -29px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	width: 73px;
+	height: 73px;
+	background: #f2f5f6;
+	border-radius: 50%;
+}
+.why_icon img
+{
+	max-width: 60%;
+}
+
+/*********************************
+10. Team
+*********************************/
+
+.team
+{
+	width: 100%;
+	background: #FFFFFF;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+.team_row
+{
+	margin-top: 50px;
+}
+.team_item
+{
+	width: 100%;
+	padding-bottom: 30px;
+}
+.team_image
+{
+	width: 195px;
+	height: 195px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.team_image img
+{
+	max-width: 100%;
+}
+.team_content
+{
+	width: 100%;
+}
+.team_title
+{
+	margin-top: 37px;
+}
+.team_title a
+{
+	font-family: 'Oswald', sans-serif;
+	font-size: 24px;
+	font-weight: 400;
+	color: rgba(24,24,24,1);
+	line-height: 1.2;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.team_title a:hover
+{
+	color: rgba(24,24,24,0.7);
+}
+.team_text
+{
+	margin-top: 22px;
+}
+

@@ -1,0 +1,945 @@
+
+{% load static %}
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CREATE COURSES</title>
+   
+<!-- Latest compiled and minified JavaScript -->
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link href="https://cdn.usebootstrap.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://cdn.usebootstrap.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href='{% static 'facilitators/vendor/fontawesome-free/css/all.min.css' %}' rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+
+    
+    <!-- Icons font CSS-->
+    {% comment %} <link href='{% static 'facilitators/vendor/mdi-font/css/material-design-iconic-font.min.css' %}' rel="stylesheet" media="all">
+    <link href='{% static 'facilitators/vendor/font-awesome-4.7/css/font-awesome.min.css' %}' rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+
+    <!-- Vendor CSS-->
+    <link href='{% static 'facilitators/vendor/select2/select2.min.css' %}' rel="stylesheet" media="all">
+    <link href='{% static 'facilitators/vendor/datepicker/daterangepicker.css' %}' rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href='{% static 'facilitators/css/opensans-font.css' %}'>
+    <link rel="stylesheet" type="text/css" href='{% static 'facilitators/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}'>
+    <!-- Main Style Css --> {% endcomment %}
+    <link rel="stylesheet" href='{% static 'facilitators/css/create_course.css'%}' />
+
+
+    <!-- Custom styles for this template-->
+    <link href='{% static 'facilitators/css/main.css'%}' rel="stylesheet">
+    <style>
+
+
+
+
+
+
+    
+        #accordionSidebar {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        
+        #topbar {
+            position: fixed;
+            z-index: 100;
+            vertical-align: top;
+            left: 224px;
+        }
+        
+        @media only screen and (max-width: 400px) {
+            #topbar {
+                left: 0;
+            }
+            #accordionSidebar {
+                top: 65px;
+            }
+        }
+        
+        @media only screen and (max-width: 767px) {
+            #topbar {
+                left: 0;
+            }
+            #accordionSidebar {
+                top: 65px;
+            }
+            #content {
+                left: auto;
+                width: 100%;
+                width: calc(100% - 0px);
+            }
+        }
+        
+        @media only screen and (max-width: 1800px) {
+            #content {
+                margin-right: 30px;
+                margin-left: 30px;
+                padding-right: 60px;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+
+        <ul class="navbar-nav bg-light sidebar sidebar-light accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href='{% url 'dashboard' %}'>
+                <img src='{% static 'facilitators/img/logotiny.png' %}' class="navbar-brand-img" alt="...">
+                <div class="sidebar-brand-text ">Learnopad </div>
+
+            </a>
+            <!-- Brand -->
+
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider  my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active ">
+                <a class="nav-link " href='{% url 'dashboard' %}'>
+                    <i class="fas fa-fw fa-tachometer-alt text-dark"></i>
+                    <span class="text-dark">Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <!-- Nav Item - Dashboard -->
+
+            <li class="nav-item active  ">
+                <a class="nav-link" href='{% url 'createcourse' %}'>
+                    <i class="fa fa-globe text-dark"></i>
+                    <span class="text-dark">Create courses</span></a>
+            </li>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item  ">
+                <a class="nav-link" href='{% url 'earnings' %}'>
+                    <i class="fa fa-bar-chart text-dark"></i>
+                    <span class="text-dark">My Earnings</span></a>
+            </li>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item  ">
+                <a class="nav-link" href='{% url 'explorecourses' %}'>
+                    <i class="fa fa-globe text-dark"></i>
+                    <span class="text-dark">Explore Courses</span></a>
+            </li>
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item ">
+                <a class="nav-link" href='{% url 'support' %}'>
+                    <i class="fa fa-heart text-dark"></i>
+                    <span class="text-dark">Support</span></a>
+            </li>
+
+
+
+
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow fixed-top" id="topbar">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                <i class="fa fa-bars"></i>
+              </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="button">
+                  <i class="fa fa-search fa-sm"></i>
+                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search fa-sm"></i>
+                          </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-dark font-weight-bold">Facilitator</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href='{% url 'profile' 1 %}'>
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> Profile
+                                </a>
+                                <a class="dropdown-item" href='{% url 'settings'%}'>
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i> Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i> Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+                <!-- page content begin  -->
+                <div class="page-content" style="">
+                    <div id="contentdone" class="form-v1-content">
+                        <div class="wizard-form">
+                            <form class="form-register"id="msform" action="" method="post">
+                                <div id="form-total">
+                                    <!-- SECTION 1 -->
+                                    <h2>
+                                        <p class="step-icon"><span>01</span></p>
+                                        <span class="step-text">Course Details</span>
+                                    </h2>
+                                    <section>
+                                        <div class="inner">
+                                            <div class="wizard-header">
+                                                <h3 class="heading">Overview</h3>
+                                                <p>Please enter the necessary information and proceed forward for content creation. </p>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-holder">
+                                                    <fieldset>
+                                                        <legend>Code</legend>
+                                                        <input type="text" class="form-control" id="id_code" name="code" placeholder="Course Code" required>
+                                                    </fieldset>
+                                                </div>
+
+                                            </div>
+
+                                             <div class="form-row">
+                                                <div class="form-holder">
+                                                    <fieldset>
+                                                        <legend>Title</legend>
+                                                        <input type="text" class="form-control" id="id_title" name="title" placeholder="Title of course" required>
+                                                    </fieldset>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-holder form-holder-2">
+                                                    <fieldset>
+                                                        <legend>Description</legend>
+                                                        <textarea id="id_description" name="description" placeholder="" rows="3" cols="50" class="form-control"></textarea> </fieldset>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-holder">
+                                                    <fieldset>
+                                                        <legend>Target Audience</legend>
+                                                        <select id="id_audience" name="audience">
+                                                            {% for obj in audience_list %}
+                                                            <option value="{{obj.audience}}">{{obj.audience}}</option>
+                                                              {% endfor %}                       
+                                                            </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-holder form-holder-2">
+                                                    <fieldset>
+                                                        <legend>Takeaway/Learning</legend>
+                                                        <textarea id="id_takeway" name="takeway" placeholder="Less than 300 words" rows="3" cols="40" class="form-control"></textarea> </fieldset>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="form-row form-row-date">
+                                                <div class="form-holder form-holder-2">
+                                                    <label class="special-label">Birth Date:</label>
+                                                    <select name="month" id="month">
+                                                        <option value="MM" disabled selected>MM</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                    </select>
+                                                    <select name="date" id="date">
+                                                        <option value="DD" disabled selected>DD</option>
+                                                        <option value="Feb">Feb</option>
+                                                        <option value="Mar">Mar</option>
+                                                        <option value="Apr">Apr</option>
+                                                        <option value="May">May</option>
+                                                    </select>
+                                                    <select name="year" id="year">
+                                                        <option value="YYYY" disabled selected>YYYY</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2015">2015</option>
+                                                        <option value="2014">2014</option>
+                                                        <option value="2013">2013</option>
+                                                    </select>
+                                                </div>
+                                            </div> -->
+                                            <!-- <div class="form-row">
+                                                <div class="form-holder form-holder-2">
+                                                    <input type="text" class="form-control input-border" id="ssn" name="ssn" placeholder="SSN" required>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </section>
+                                    <!-- SECTION 2 -->
+                                    <h2>
+                                        <p class="step-icon"><span>02</span></p>
+                                        <span class="step-text">Course Categories</span>
+                                    </h2>
+                                    <section>
+                                        <div class="inner">
+                                            <div class="wizard-header">
+                                                <h3 class="heading">Details</h3>
+                                                <p>Please enter the infomation and proceed to the next step.</p>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-holder form-holder-1">
+                                                    <input type="text" name="find_category" placeholder="Select the category" class="form-control" >
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                          <div class="form-group mt-auto">
+                    
+                    <span>
+                        <select class="selectpicker" multiple title="Choose Your Course" name="course" id="choose-category" data-live-search="true">
+
+                            {% for cat in category %}
+                            <optgroup label="{{cat.name}}">
+                                {% for sub in subcategory %}
+                                {% if sub.cat_id.cat_id == cat.cat_id %}
+                                <option value="{{sub.subCat_id}}">{{sub.name}}</option>
+                                {% endif %}
+                               {% endfor %}
+                            </optgroup>
+                            {% endfor %}
+                           
+                        </select>
+                        </span>
+                        <br>
+                         <i id="fwcourse-error" aria-hidden="true"></i><span id="course-error" class="text-danger"></span>
+                    </div>
+                                                 </div>
+                                                </div>
+                                           
+                                            </div>
+                                    </section>
+                                   
+                                    <!-- SECTION 3 -->
+                                    <h2>
+                                        <p class="step-icon"><span>03</span></p>
+                                        <span class="step-text">Course Duration</span>
+                                    </h2>
+                                    <section>
+                                        <div class="inner">
+                                            <div class="wizard-header">
+                                                <h3 class="heading">Final Step</h3>
+                                                <p>Proceed to build your course/session.</p>
+                                            </div>
+
+                                            <div class="container register" style="margin:0px;padding: 0px;">
+                                                <div class="row">
+
+                                                    <div class="col register-right">
+
+                                                        <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist" style="">
+                                                            <li class="nav-item">
+                                                                <a class="nav-link active" id="session" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Sessions</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link" id="course" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Course</a>
+                                                            </li>
+                                                        </ul>
+
+
+                                                        <div class="tab-content" id="myTabContent">
+                                                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                                                <h3 class="register-heading" style="color:rgb(20, 153, 214);">Here to address learners and share your experience? Share an interactive Session Video!</h3>
+                                                                <div class="row register-form">
+                                                                    <div class="col">
+                                                                         <div class="form-row">
+                                                <div class="form-holder">
+                                                    <fieldset>
+                                                        <legend>Title</legend>
+                                                        <input type="text" class="form-control" id="stitle" name="htitle" placeholder="Title of Video" >
+                                                    </fieldset>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-row">
+                                                <fieldset>
+                                            <label class="special-label">Description</label>
+                                            <textarea id="id_description" name="sdescription" placeholder="Description" rows="3" cols="50" class="form-control"></textarea> </fieldset>
+                                                
+                                            </div>
+             
+                                                                        <label class="special-label">Session Duration:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+                                                                                    <legend>Hour/min</legend>
+                                                                                    <input type="time" id="ltime" name="ltime"class="without_ampm" min="00:00" max="24:00" > </fieldset>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                        <label class="special-label">Starting From:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+                                                                                    <legend>Date</legend>
+                                                                                    <input type="date" id="ldate" name="trip-start" value="2018-07-22" min="2018-01-01"> </div>
+
+                                                                        </div>
+                                                                        <!-- 
+                                                                        <label class="special-label">Hours of Session/Day:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+
+                                                                                    <input type="number" id="" name="" min="1" max="24">
+                                                                            </div>
+
+                                                                        </div> -->
+
+                                                                        <label class="special-label">Session Timings:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+                                                                                    <legend>From</legend>
+                                                                                    <input type="time" id="lstime"  name="lstime"min="00:00" max="24:00" > </fieldset>
+                                                                            </div>
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+                                                                                    <legend>To</legend>
+                                                                                    <input type="time" id="letime" name="letime" min="00:00" max="24:00" > </fieldset>
+                                                                            </div>
+
+                                                                        </div>
+
+
+                                                                        <label class="special-label">Days:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+                                                                                    <input type="text" name="days"  id="ldays" /> </div>
+
+                                                                        </div>
+
+
+                                                                        <div class="form-holder form-holder-2">
+                                                                            <label class="special-label">Upload:</label>
+
+                                                                            
+                                                                                <div class="custom-file">
+                                                                                    <input type="file" class="custom-file-input" id="livevideo">
+                                                                                    <label class="custom-file-label" for="customFile">Session Video</label>
+                                                                                </div>
+
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                                                <h3 class="register-heading" style="color:rgb(20, 153, 214);">Want to impact people through your teachings? Start here by uploading Course videos!</h3>
+                                                                <div class="row register-form">
+                                                                    <div class="col">
+                                                                               <div class="form-row">
+                                                <div class="form-holder">
+                                                    <fieldset>
+                                                        <legend>Title</legend>
+                                                        <input type="text" class="form-control" id="ctitle" name="title" placeholder="Title of Video">
+                                                    </fieldset>
+                                                </div>
+
+                                            </div>
+                                            <div class="form-row">
+                                                <fieldset>
+                                            <label class="special-label">Description</label>
+                                            <textarea id="id_description" name="cdescription" placeholder="Description" rows="3" cols="50" class="form-control"></textarea> </fieldset>
+                                                
+                                            </div>
+             
+                                                                        <label class="special-label">Course Video Duration:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+                                                                                    <legend>Hour/min</legend>
+                                                                                    <input type="time" id="ctime" name="ctime"class="without_ampm" min="00:00" max="24:00" > </fieldset>
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+
+
+                                                                        <label class="special-label">Days:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+
+                                                                                    <input type="number" id="cdays" name="cdays" min="1" max="999">
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <label class="special-label">Months:</label>
+                                                                        <div class="form-row">
+                                                                            <div class="form-holder">
+                                                                                <fieldset>
+
+                                                                                    <input type="number" id="cmonths" name="cmonths" min="1" max="12">
+                                                                            </div>
+
+                                                                        </div>
+
+
+
+                                                                        <div class="form-holder form-holder-2">
+                                                                            <label class="special-label">Upload:</label>
+
+                                                                            
+                                                                                <div class="custom-file">
+                                                                                    <input type="file" class="custom-file-input" id="coursevideo">
+                                                                                    <label class="custom-file-label" for="customFile">Course Video</label>
+                                                                                </div>
+
+
+                                                                        </div>
+
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+
+
+                                            <!-- <div class="form-row form-row-date">
+                                                <div class="form-holder form-holder-2">
+                                                    <label class="special-label">Course Duration:</label>
+                                                    <div class="form-row">
+                                                        <div class="form-holder">
+                                                            <fieldset>
+                                                                <legend>Hours</legend>
+                                                                <input type="time" id="appt" name="appt" min="00:00" max="24:00" required> </fieldset>
+                                                        </div>
+
+                                                    </div>
+                                                    <label class="special-label">Start Date:</label>
+                                                    <div class="form-row">
+                                                        <div class="form-holder">
+                                                            <fieldset>
+                                                                <legend>Start Date</legend>
+                                                                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01"> </div>
+
+                                                    </div>
+
+                                            <label class="special-label">Months:</label>
+
+                                                    <select name="" id="">
+                                                        <option value="MM" disabled selected>Months</option>
+                                                        <option value="">0</option>
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                        <option value="">5</option>
+                                                        <option value="">6</option>
+                                                        <option value="">7</option>
+
+                                                        <option value="">8</option>
+                                                        <option value="">9</option>
+                                                        <option value="">10</option>
+                                                        <option value="">11</option>
+                                                        <option value="">12</option>
+                                                       
+
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-holder form-holder-2">
+                                                    <label class="special-label">No.of Hours/Day:</label>
+                                                    <select name="" id="">
+                                                        <option value="" disabled selected>Hours</option>
+                                                        <option value="">1</option>
+                                                        <option value="">2</option>
+                                                        <option value="">3</option>
+                                                        <option value="">4</option>
+                                                        <option value="">5</option>
+                                                        <option value="">6</option>
+                                                        <option value="">7</option>
+
+                                                        <option value="">8</option>
+                                                        <option value="">9</option>
+                                                        <option value="">10</option>
+                                                        <option value="">11</option>
+                                                        <option value="">12+</option>
+
+
+
+                                                    </select>
+                                                </div>
+                                                <div class="form-holder form-holder-2">
+                                                    <label class="special-label">Upload:</label>
+
+                                                    <form>
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="customFile">
+                                                            <label class="custom-file-label" for="customFile">Upload Video</label>
+                                                        </div>
+                                                        <hr><label class="special-label">OR</label></hr>
+
+                                                        <div class="form-holder">
+                                                            <label class="special-label">URL Link:</label>
+
+                                                            <fieldset>
+                                                                <input type="text" class="form-control" id="" name="" placeholder="https://example.com" required>
+                                                            </fieldset>
+                                                        </div>
+                                                </div>
+
+
+                                            </div> -->
+                                        </div>
+                                        <!-- <div class="form-row">
+                                                <div class="form-holder form-holder-2">
+                                                    <input type="radio" class="radio" name="radio1" id="plan-1" value="plan-1">
+                                                    <label class="plan-icon plan-1-label" for="plan-1">
+                                                        <img src="images/form-v1-icon-2.png" alt="pay-1">
+                                                    </label>
+                                                    <div class="plan-total">
+                                                        <span class="plan-title">Specific Plan</span>
+                                                        <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.</p>
+                                                    </div>
+                                                    <input type="radio" class="radio" name="radio1" id="plan-2" value="plan-2">
+                                                    <label class="plan-icon plan-2-label" for="plan-2">
+                                                            <img src="images/form-v1-icon-2.png" alt="pay-1">
+                                                    </label>
+                                                    <div class="plan-total">
+                                                        <span class="plan-title">Medium Plan</span>
+                                                        <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.</p>
+                                                    </div>
+                                                    <input type="radio" class="radio" name="radio1" id="plan-3" value="plan-3" checked>
+                                                    <label class="plan-icon plan-3-label" for="plan-3">
+                                                        <img src="images/form-v1-icon-3.png" alt="pay-2">
+                                                    </label>
+                                                    <div class="plan-total">
+                                                        <span class="plan-title">Special Plan</span>
+                                                        <p class="plan-text">Pellentesque nec nam aliquam sem et volutpat consequat mauris nunc congue nisi.</p>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                    <div class="container text-center">
+                            <button class="btn btn-secondary" type="submit" >submit</button>
+                                    </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- page content end  -->
+
+                <!-- Footer -->
+                <footer class="footer pt-0" style="z-index:1;">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6">
+                            <div class="copyright text-center  text-lg-left  text-black">
+                                &copy; 2020 <a href="http://tmhm.in/" class="font-weight-bold ml-1" target="_blank">TMHM Consulting Pvt Ltd.</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ">
+                            <ul class="nav nav-footer text-black justify-content-center justify-content-lg-end">
+                                <li class="nav-item">
+                                    <a href="http://tmhm.in/" class="nav-link" target="_blank">
+                                        <span class="text-dark">About Us</span></a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a href="https://tmhm.in/blog/" class="nav-link" target="_blank"> <span class="text-dark">Blog</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" class="nav-link" target="_blank"> <span class="text-dark">Privacy Policy</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="index.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+
+   
+
+
+    $(document).ready(function(){
+  
+    var $myForm = $('#msform')
+    $myForm.submit(function(event){
+        event.preventDefault()  
+        {% comment %} var cat_list = $('#choose-category option:selected').toArray().map(item => item.text);       {% endcomment %}
+    var session= document.getElementById('session').getAttribute('aria-selected');
+   var course= document.getElementById('course').getAttribute('aria-selected');
+   var coursevideo;
+   var sessionvideo;
+   var $video;
+   var data = {};
+   var course_details={
+       "code":$('#id_code').val(),
+       "title":$('#id_title').val(),
+       "description":$('#id_description').val(),
+       "audience":$('#id_audience').val(),
+       "takeway":$('#id_takeway').val(),
+ 
+   };
+   if(course=='true')
+   {
+        coursevideo={
+                "title":$('#ctitle').val(),
+                "description":$('#cdescription').val(),
+                "session_duration":$('#ctime').val(),
+                "days":$('#cdays').val(),
+                "months":$('#cmonths').val()
+       
+       }
+        $video=$('#coursevideo').get(0).files[0];
+data={
+    "rvideo":"true",
+    "svideo":"false",
+    "video":coursevideo,
+    "course":course_details
+}
+   }
+   else {
+sessionvideo={
+               "title":$('#stime').val(),
+                "description":$('#sdescription').val(),
+                "session_duration":$('#ltime').val(),
+                "session_start":$('#lstime').val(),
+                "session_end":$('#letime').val(),
+                "date":$('#ldate').val(),
+                "days":$('#ldays').val()
+       
+       }
+
+ $video=$('#livevideo').get(0).files[0]
+
+ data={
+    "rvideo":"false",
+    "svideo":"true",
+    "video":sessionvideo,
+    "course":course_details
+}
+   }
+
+
+console.log(data);
+
+var formData = new FormData();
+  formData.append('file',$video)
+  formData.append('data',JSON.stringify(data))
+
+ $.ajaxSetup({async: false});
+$.ajax({
+    url: '{% url 'createcourseapi' %}',
+    async: false,
+    data: formData,
+    contentType: false,
+    processData: false,
+    headers: {
+                        "X-CSRFTOKEN": "{{ csrf_token }}"
+                },
+    type: 'POST',
+    cache: false,
+    
+    error: function(xhr, status, error) {
+        alert(error);
+    },
+    success: function(response) {
+     
+                window.location.href ='{% url "facilitator-register" %}';
+            
+    }
+});
+
+$.ajaxSetup({async: true}); 
+
+});
+});
+
+    // Material Select Initialization
+
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+
+        {% comment %} var colors = ['1abc9c', '2c3e50', '2980b9', '7f8c8d', 'f1c40f', 'd35400', '27ae60'];
+
+        colors.each(function(color) {
+            $$('.color-picker')[0].insert(
+                '<div class="square" style="background: #' + color + '"></div>'
+            );
+        });
+
+        $$('.color-picker')[0].on('click', '.square', function(event, square) {
+            background = square.getStyle('background');
+            $$('.custom-dropdown select').each(function(dropdown) {
+                dropdown.setStyle({
+                    'background': background
+                });
+            });
+        });  {% endcomment %}
+    </script>
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src='{% static 'facilitators/vendor/jquery/jquery.min.js'%}'></script>
+    <script src='{% static 'facilitators/vendor/bootstrap/js/bootstrap.bundle.min.js'%}'></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src='{% static 'facilitators/vendor/jquery-easing/jquery.easing.min.js'%}'></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src='{% static 'facilitators/js/sb-admin-2.min.js'%}'></script>
+
+    <!-- Page level plugins -->
+    <script src='{% static 'facilitators/vendor/chart.js/Chart.min.js'%}'></script> 
+
+    <!-- Page level custom scripts -->
+    <script src='{% static 'facilitators/js/demo/chart-area-demo.js'%}'></script>
+    <script src='{% static 'facilitators/js/demo/chart-pie-demo.js'%}'></script>
+    <script src='{% static 'facilitators/js/jquery-3.3.1.min.js'%}'></script>
+    <script src='{% static 'facilitators/js/jquery.steps.js'%}'></script>
+    <script src='{% static 'facilitators/js/main.js'%}'></script>
+
+</body>
+
+</html>

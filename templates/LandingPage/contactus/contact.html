@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+<link href="{% static 'LandingPage/img/logotiny.png' %}" rel="icon">
+<title>Contact Us</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'LandingPage/css/section/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link rel="stylesheet" type="text/css" href="{% static 'LandingPage/css/section/plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'LandingPage/css/section/plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'LandingPage/css/section/plugins/OwlCarousel2-2.2.1/animate.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static 'LandingPage/css/section/contact.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'LandingPage/css/section/contact_responsive.css' %}">
+
+<style>
+    body,html {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    .item{
+        background-color: white;
+        min-height: 250px;
+
+        border-radius: 10px;
+        border:2px solid black;
+    }
+    .label{
+        color: white;
+    }
+    .head{
+        color: black;
+    }
+   
+
+    .img-area{
+        margin: auto;
+        overflow: hidden;
+        align-items: center;
+    }
+    .img-area img{
+        height: 400px;
+        width: 500px;
+    }
+   
+    #navbar-left a{
+        text-decoration: none;
+        color: #ababab;
+    }
+    #navbar-left a:hover{
+        color: black;
+    }
+    #navbar-left button{
+        color: white;
+    }
+    footer{
+        background-image: linear-gradient(to bottom right, #f7f7f7, #eafbff);
+        color:#757575;
+        font-size: 13px;
+        line-height: 1.2
+    }
+    footer h6{
+        color: #9e9e9e;
+    }
+    footer a{
+        color: black;
+    }
+    footer a:link{
+        text-decoration: none;
+    }
+    footer a:hover{
+        color: #757575;
+    }
+    footer #social i{
+        color: black;
+        font-size: 1.2rem;
+    }
+    footer #social i:hover{
+        color: #3db166;
+    }
+    @media (max-width: 768px) {
+        #navbar-left{
+            display: block;
+        }
+        #first {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            line-height: 12px;
+        }
+        .container-fluid{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .section-a img{
+            padding: 0;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 990px){
+        #navbar-left{
+            display: block;
+        }
+        #navbar-left form{
+            display: none;
+        }
+        .section-a{
+            margin-bottom: 32px;
+        }
+        .section-a img{
+            margin: 32px;
+        }
+        .section-a #section-a-learn h2,h3{
+            font-size: 31px;
+        }
+        .section-a #section-a-learn h4{
+            font-size: 15px;
+        }
+        #query{
+            margin-left: 11em;
+        }
+        #query_request{
+            text-align: center !important;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 375px){
+        #query{
+            margin-left: 0 !important;
+        }
+    }
+    @media all and (max-width: 765px){
+        footer{
+            font-size: 1rem;
+        }
+        #query{
+            margin-left: 1.5em;
+        }
+        #footer-left{
+            padding-left: 3em;
+            text-align: left;
+        }
+    }
+    
+
+    @media only screen and (max-width: 1080px){
+        #request{
+            align-items: center;
+            justify-content: center;
+            text-align:center;
+        }
+    }
+
+    </style>
+    </head>
+
+<body>
+ 
+  
+    <figure class="figure" style="margin-right: 11px;margin-top: 18px;margin-bottom: 11px;margin-left: 15px;">
+        <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;">
+        <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+    </figure>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #f7f7f7;">
+        <div class="container">
+            <a class="navbar-brand" href="/home"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampl">
+                        Free Content
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav justify-content-end text-sm-left" id="navbar-left">
+                    
+                   
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" style="padding-left: 0;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/signup" class="btn btn-primary rounded" style="color: white">Sign Up</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>    
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-size: 13px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel"><strong>Sign In</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form style="padding-right: 80px; padding-left: 80px;">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address / Phone Number">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" data-toggle="password" placeholder="Password" id="password-field">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <p style="font-size: 8.5px">By clicking Sign In, you agree to our <a href="/hpme">Terms of Use</a> and our <a href="/home">Privacy Policy.</a></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="font-size: 12px">SIGN IN</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+	<div class="container">
+		<div class="row">
+
+            <div class="col-12 col-md-6">
+                <figure class="figure" style="margin-right: 11px;margin-top: 18px;margin-bottom: 11px;margin-left: 15px;">
+                    <img src="{% static 'LandingPage/img/customer.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;">
+                </figure>
+            </div>
+			<!-- Get in touch -->
+			<div class="col-12 col-md-6">
+                <div class="contact_content" style="margin-bottom:-60px">
+                    <div class="contact_title text-center">Get in touch with us</div>
+                    <div class="contact_text text-center">
+                        <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique. </p>
+                    </div>
+                    
+                </div>
+                <!-- Contact Form -->
+                <div align="center" style="margin: 20px">
+                    <div class="contact_form_container">
+                        <form action="#" id="contact_form" class="contact_form">
+                            {% csrf_token %}
+                            <div style="margin-bottom: 20px"><input type="text" class="contact_input contact_input_name inpt" placeholder="Your Name" required="required"><div class="input_border"></div></div>
+                            <div><input type="text" class="contact_input contact_input_email inpt" placeholder="Your E-mail" required="required"><div class="input_border"></div></div>
+                            <div class="row mt-4">
+                                <div class="col-lg-6" style="margin-bottom: 20px">
+                                    <div class="contact_input_name inpt">
+                                        <select class="custom-select" id="inputGroupSelect02" style="height: 52px;font-family: 'Oswald', sans-serif;font-size: 14px !important;font-weight: 400 !important;color: #88889d !important;">
+                                            <option selected > Categories...</option>
+                                            <option value="Learner">Learner</option>
+                                            <option value="Facilitator">Facilitator</option>
+                                            <option value="Campus">Campus</option>
+                                            <option value="Corporate">Corporate</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6" style="margin-bottom: 20px">
+                                    <div><input type="tel" class="contact_input contact_input_subject inpt" placeholder="Mobile Number" required="required"><div class="input_border"></div></div>
+                                </div>
+                            </div>
+                            <div><textarea class="contact_textarea contact_input inpt" placeholder="Message" required="required" style="height: 150px;"></textarea><div class="input_border" style="bottom:5px"></div></div>
+                            <button class="contact_button">send</button>
+                        </form>
+                    </div>
+                </div>
+		    </div>
+
+		</div>
+	</div>
+
+
+    
+<div style="margin-bottom: 5em;"></div>
+<!-- Footer -->
+<footer class="page-footer font-small pt-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left pb-3" style="background: transparent;">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <figure class="figure" style="margin: 11px;">
+                    <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;width: 60px; height: 40px;">
+                    <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+                </figure>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <p>
+                <a href="/aboutus">About Us</a>
+                </p>
+                <p>
+                <a href="#!">Career</a>
+                </p>
+                <p>
+                <a href="/contact">Contact Us</a>
+                </p>
+                <p>
+                <a href="/terms-and-services">Terms/Services</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto" id="footer-left">
+                <br>
+                <p>
+                <a href="/learner">Learners</a>
+                </p>
+                <p>
+                <a href="/facilitator">Facilitators</a>
+                </p>
+                <p>
+                <a href="/campus">Campus</a>
+                </p>
+                <p>
+                <a href="#!">Corporates</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 social" id="footer-left">
+            <h6 class="text-uppercase font-weight-bold">Our App</h6>
+            <hr class="mb-2 mt-0 d-inline-block mx-auto" style="width: 20px;">
+            <p>
+            <a href="https://www.apple.com/ios/app-store/"><i class="fab fa-apple mr-1" style="font-size: 20px;"></i> IOS Store</a>
+            </p>
+            <p>
+            <a href="https://play.google.com/store"><img class="mr-1" src="{% static 'LandingPage/img/play-store.svg' %}" width="20px" height="20px"> Andriod Store</a>
+            </p>
+        </div>
+
+    </div>
+
+
+        <hr class="mb-4 mt-0 d-inline-block mx-auto text-sm-lef" style="width: 100%; height: 1px; background-color: #3db166;">
+
+        <div class="row d-flex align-items-center">
+
+        <div class="col-md-7 col-lg-8">
+            <p class="text-center text-md-left text-sm-left">© 2020 Copyright:
+            <a href="#" style="font-size:11px">
+                <strong> TMHM Consulting Services Pvt.Ltd</strong>
+            </a>
+            </p>
+        </div>
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+            <div class="text-center text-md-right text-sm-left" id="social">
+
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-wordpress-simple"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                </li>
+            </ul>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/da956b6924.js" crossorigin="anonymous"></script>
+    
+    <script src="{% static 'LandingPage/js/section/plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+    <script src="{% static 'LandingPage/js/section/plugins/easing/easing.js' %}"></script>
+    <script src="{% static 'LandingPage/js/section/plugins/parallax-js-master/parallax.min.js' %}"></script>
+
+    <script src="{% static 'LandingPage/js/section/contact.js' %}"></script>
+    <script>
+
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+
+            $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+        });
+        
+          $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+
+            $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+ 
+.prev a{
+     
+     
+    text-decoration: none;
+}
+table .last-row td{
+    font-weight: bold ;
+}
+ 
+@media screen and (max-width: 455px) {
+    table{
+        width:100%;
+        height:100%;
+    }
+}
+@media screen and (min-width:1200px)
+{
+    .prev
+    {
+        display:none;
+    }
+}
+@media screen and (min-width:445px)
+{
+    .earnings{
+        overflow-x:hidden;
+    }
+}

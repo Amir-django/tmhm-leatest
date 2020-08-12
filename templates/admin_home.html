@@ -1,0 +1,159 @@
+{% extends 'myAdmin/base_site.html' %} {% load i18n static %} {% block extrastyle %}
+<style>
+    a {
+        text-decoration: none;
+    
+    }
+</style>
+{{ block.super }} {{ form.media }}
+<link href="{% static 'admin/css/dashboard.css'%}" rel="stylesheet"> {% endblock %} {% block content %}
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">TMHM PVT LTD</a>
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            {% if not is_popup %}
+            <a class="text-white" href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a> {% endif %}
+        </li>
+        <li class="nav-item">
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block navbar-dark bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                   
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                             Facilitator(CRUD)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                             Learners(CRUD)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                            <span data-feather="users"></span> Catagories(CRUD)
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">
+                             Courses(CRUD)
+                        </a>
+                    </li>
+                    
+                </ul>
+
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Saved reports</span>
+                    <a class="d-flex align-items-center text-muted" href="#">
+                        <span data-feather="plus-circle"></span>
+                    </a>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span> Current month
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span> Last quarter
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span> Social engagement
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span> Year-end sale
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="row">
+                <div class="col-md-3 d-block mx-auto">
+                    <h1 class="h2">Dashboard</h1>
+
+                </div>
+
+                <div class="col-md-6 ">
+                    <div class="row">
+                        <div class="col-md-9  d-block mx-auto">
+                            {% if not is_popup %} {% if has_permission %} {% block welcome-msg %} {% trans 'Welcome,' %}
+                            <strong>{% firstof user.get_short_name user.get_username %}</strong>. {% endblock %} {% endif %} {% endif %} {% if not is_popup %} {% if has_permission %} {% block userlinks %} {% if site_url %}
+                            <a href="{{ site_url }}">{% trans 'View site' %}</a> / {% endif %} {% if user.is_active and user.is_staff %} {% url 'django-admindocs-docroot' as docsroot %} {% if docsroot %}
+                            <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> / {% endif %} {% endif %} {% if user.has_usable_password %}
+                            <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> / {% endif %}
+                            <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> {% if title %} &rsaquo; {{ title }}{% endif %} {% endblock %}{% endif %} {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr>
+
+
+
+            
+            
+        {% if app_list %}
+    {% for app in app_list %}
+        <div class="app-{{ app.app_label }} module">
+        <div class="alert alert-info bg-dark text-white" role="alert"><a href="{{ app.app_url }}" class="section text-white" title="{% blocktrans with name=app.name %}Models in the {{ name }} application{% endblocktrans %}">{{ app.name }}</a></div>
+
+            
+        
+        <div class="table-responsive">
+        <table class="table table-condensed table-md">
+        
+        {% for model in app.models %}
+
+
+            <tr class="model-{{ model.object_name|lower }} bg-light">
+            {% if model.admin_url %}
+                <th scope="row"><a href="{{ model.admin_url }}">{{ model.name }}</a></th>
+            {% else %}
+                <th scope="row">{{ model.name }}</th>
+            {% endif %}
+
+            {% if model.add_url %}
+                <td><a href="{{ model.add_url }}" class="addlink">{% trans 'Add' %}</a></td>
+            {% else %}
+                <td>&nbsp;</td>
+            {% endif %}
+
+            {% if model.admin_url %}
+                {% if model.view_only %}
+                <td><a href="{{ model.admin_url }}" class="viewlink">{% trans 'View' %}</a></td>
+                {% else %}
+                <td><a href="{{ model.admin_url }}" class="changelink">{% trans 'Change' %}</a></td>
+                {% endif %}
+            {% else %}
+                <td>&nbsp;</td>
+            {% endif %}
+            </tr>
+        {% endfor %}
+        </table>
+        </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>{% trans 'You don’t have permission to view or edit anything.' %}</p>
+{% endif %}
+
+
+   
+
+{% endblock %}

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <link href="{% static 'LandingPage/img/logotiny.png' %}" rel="icon">
+    <title>Campus </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'campus/css/open-iconic-bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'campus/css/animate.css'%}">
+
+    <link rel="stylesheet" href="{% static 'campus/css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'campus/css/owl.theme.default.min.css'%}">
+    <link rel="stylesheet" href="{% static 'campus/css/magnific-popup.css'%}">
+
+    <link rel="stylesheet" href="{% static 'campus/css/aos.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'campus/css/ionicons.min.css'%}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'LandingPage/css/section/plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'campus/css/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'campus/css/icomoon.css'%}">
+    <link rel="stylesheet" href="{% static 'campus/css/style.css'%}">
+</head>
+
+<style>
+    body,html {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: Raleway;
+    }
+    .item{
+        background-color: white;
+        min-height: 250px;
+
+        border-radius: 10px;
+        border:2px solid black;
+    }
+   
+    #navbar-left a{
+        text-decoration: none;
+        color: #ababab;
+    }
+    #navbar-left a:hover{
+        color: black;
+    }
+    #navbar-left button{
+        color: white;
+    }
+    footer{
+        background: #eeeeee;
+        color:#757575;
+        font-size: 13px;
+        line-height: 1.2
+    }
+    footer h6{
+        color: #9e9e9e;
+    }
+    footer a{
+        color: black;
+    }
+    footer a:link{
+        text-decoration: none;
+    }
+    footer a:hover{
+        color: #757575;
+    }
+    footer #social i{
+        color: black;
+        font-size: 1.2rem;
+    }
+    footer #social i:hover{
+        color: #3db166;
+    }
+    @media (max-width: 768px) {
+        #navbar-left{
+            display: block;
+        }
+        #first {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            line-height: 12px;
+        }
+        .container-fluid{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .section-a img{
+            padding: 0;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 990px){
+        #navbar-left{
+            display: block;
+        }
+        #navbar-left form{
+            display: none;
+        }
+        .section-a{
+            margin-bottom: 32px;
+        }
+        .section-a img{
+            margin: 32px;
+        }
+        .section-a #section-a-learn h2,h3{
+            font-size: 31px;
+        }
+        .section-a #section-a-learn h4{
+            font-size: 15px;
+        }
+        #query{
+            margin-left: 11em;
+        }
+        #query_request{
+            text-align: center !important;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 375px){
+        #query{
+            margin-left: 0 !important;
+        }
+    }
+    @media all and (max-width: 765px){
+        footer{
+            font-size: 1rem;
+        }
+        #query{
+            margin-left: 1.5em;
+        }
+        #footer-left{
+            padding-left: 3em;
+            text-align: left;
+        }
+    }
+    
+
+    @media only screen and (max-width: 1080px){
+        #request{
+            align-items: center;
+            justify-content: center;
+            text-align:center;
+        }
+    }
+
+    </style>
+
+<body>
+    <!-- navbar  -->
+    <figure class="figure" style="margin-right: 11px;margin-top: 18px;margin-bottom: 11px;margin-left: 15px;">
+        <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;">
+        <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+    </figure>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #f7f7f7;">
+        <div class="container">
+            <a class="navbar-brand" href="/home"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampl">
+                        Free Content
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav justify-content-end text-sm-left" id="navbar-left">
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" style="padding-left: 0;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/signup" class="btn btn-primary rounded" style="color: white">Sign Up</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-size: 13px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel"><strong>Sign In</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form style="padding-right: 80px; padding-left: 80px;">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address / Phone Number">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" data-toggle="password" placeholder="Password" id="password-field">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <p style="font-size: 8.5px">By clicking Sign In, you agree to our <a href="/hpme">Terms of Use</a> and our <a href="/home">Privacy Policy.</a></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="font-size: 12px">SIGN IN</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- changes  -->
+    <!-- top carousel  -->
+    <section class="home-slider owl-carousel" style="height:35rem;">
+        <div class="slider-item" style="background-image:url('{% static 'campus/images/bg_1.jpg'%}');">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-start">
+                    <div class="col-md-6 ftco-animate">
+                        <h1 class="mb-4">Get Your <span style="background-color: #007bff;color: #fff;">Education</span>Today!!</h1>
+                        <p>Providing quality education online.</p>
+
+
+                        <p><a href="/contact" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of top carousel  -->
+
+
+
+    <!-- changes made  -->
+    <section class="ftco-section ftco-no-pt ftc-no-pb" style="margin-bottom:50px;">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+                    <div class="img" style="background-image: url(https://i.pinimg.com/originals/12/6c/a6/126ca6fa4ffbb94a8cb4abdb8670e02f.jpg); border"></div>
+                </div>
+                <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+                    <h2 class="mb-4">Are your Students hidden talents still hidden?</h2>
+                    <p>Then probably you are at the right place to uncover the skillset while your students become competent.
+                    </p>
+                    <div class="row mt-5">
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Latest courses </h3>
+                                    <p>Still wondering which course to opt? Try our in-demand and Prominent courses</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Certified Facilitators</h3>
+                                    <p>Learn from the best teaching faculty from all over the country.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Manageable </h3>
+                                    <p>Opt for self-pace learning and from the comfort of your home.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="services-2 d-flex">
+                                <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
+                                <div class="text pl-3">
+                                    <h3>Experience </h3>
+                                    <p>Experience the unforeseen and better quality education with finest facilitators.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(https://www.itl.cat/pngfile/big/214-2140785_ielts-student.jpg);" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-2 d-flex">
+                <div class="col-md-6 align-items-stretch d-flex">
+                    <div class="img img-video d-flex align-items-center" style="background-image: url('{% static 'campus/images/read.jpg'%}');">
+
+                    </div>
+                </div>
+                <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
+                    <h2 class="mb-4">LearnOpad Online Learning</h2>
+                    <p>TMHM works as a harbinger between facilitator and learners. We aim to connect learners with their faculty directly for any constraint they face during the learning process.This portal will help you to expand your practical knowledge
+                        and provide you with an insight related to the discipline you opt during enrollment.       </p>
+                    <p>Time is precious. We are determined to help you unfold a better career in the shortest frame period of time. Therefore, we bring to you a smooth & hassle-free learning environment.So what are you waiting for? Register now! </p>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+
+
+    <section id="courses" class="ftco-section" style="margin-top:0;">
+        <div class="container-fluid px-4">
+            <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                    <h2 class="mb-4"><span>Our</span> Courses</h2>
+                    <p>Experience the advanced learning.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 course ftco-animate">
+                    <div class="img" style="background-image: url('{% static 'campus/images/course-1.jpg'%}');"></div>
+                    <div class="text pt-4">
+                        <p class="meta d-flex">
+                            <span><i class="icon-user mr-2"></i>Mr. Khan</span>
+                            <span><i class="icon-table mr-2"></i>10 seats</span>
+                            <span><i class="icon-calendar mr-2"></i>4 Years</span>
+                        </p>
+                        <h3><a href="#">Electric Engineering</a></h3>
+                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <p><a href="#" class="btn btn-primary">Apply now</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 course ftco-animate">
+                    <div class="img" style="background-image: url('{% static 'campus/images/course-2.jpg'%}');"></div>
+                    <div class="text pt-4">
+                        <p class="meta d-flex">
+                            <span><i class="icon-user mr-2"></i>Mr. Khan</span>
+                            <span><i class="icon-table mr-2"></i>10 seats</span>
+                            <span><i class="icon-calendar mr-2"></i>4 Years</span>
+                        </p>
+                        <h3><a href="#">Electric Engineering</a></h3>
+                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <p><a href="#" class="btn btn-primary">Apply now</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4 course ftco-animate">
+                    <div class="img" style="background-image: url('{% static 'campus/images/course-3.jpg'%}');"></div>
+                    <div class="text pt-4">
+                        <p class="meta d-flex">
+                            <span><i class="icon-user mr-2"></i>Mr. Khan</span>
+                            <span><i class="icon-table mr-2"></i>10 seats</span>
+                            <span><i class="icon-calendar mr-2"></i>4 Years</span>
+                        </p>
+                        <h3><a href="#">Electric Engineering</a></h3>
+                        <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                        <p><a href="#" class="btn btn-primary">Apply now</a></p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="ftco-section testimony-section">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                    <h2 class="mb-4">Meet the Alumni</h2>
+                    <p>recommended by the best.</p>
+                </div>
+            </div>
+            <div class="row ftco-animate justify-content-center">
+                <div class="col-md-12">
+                    <div class="carousel-testimony owl-carousel" style="border" none;>
+
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img mr-4" style="background-image: url('{% static 'campus/images/teacher-1.jpg'%}')">
+                                </div>
+                                <div class="text ml-2">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                    </span>
+                                    <p>A great learning and teaching experience with awesome learning material and facilitators.</p>
+                                    <p class="name">Racky Henderson</p>
+                                    <span class="position">Father</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img mr-4" style="background-image: url('{% static 'campus/images/teacher-2.jpg'%}')">
+                                </div>
+                                <div class="text ml-2">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                    </span>
+                                    <p>A great learning and teaching experience with awesome learning material and facilitators.</p>
+                                    <p class="name">Henry Dee</p>
+                                    <span class="position">Mother</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img mr-4" style="background-image: url('{% static 'campus/images/teacher-3.jpg'%}')">
+                                </div>
+                                <div class="text ml-2">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                    </span>
+                                    <p>A great learning and teaching experience with awesome learning material and facilitators.</p>
+                                    <p class="name">Mark Huff</p>
+                                    <span class="position">Mother</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img mr-4" style="background-image: url('{% static 'campus/images/teacher-4.jpg'%}')">
+                                </div>
+                                <div class="text ml-2">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                    </span>
+                                    <p>A great learning experience with awesome learning material and facilitators.</p>
+                                    <p class="name">Rodel Golez</p>
+                                    <span class="position">Mother</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="testimony-wrap d-flex">
+                                <div class="user-img mr-4" style="background-image: url('{% static 'campus/images/teacher-1.jpg'%}')">
+                                </div>
+                                <div class="text ml-2">
+                                    <span class="quote d-flex align-items-center justify-content-center">
+                                        <i class="icon-quote-left"></i>
+                                        </span>
+                                    <p>A great learning experience with awesome learning material and facilitators.</p>
+                                    <p class="name">Ken Bosh</p>
+                                    <span class="position">Mother</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer start  -->
+<footer class="page-footer font-small pt-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left pb-3" style="background: transparent;">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <figure class="figure" style="margin: 11px;">
+                    <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;width: 60px; height: 40px;">
+                    <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+                </figure>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <p>
+                <a href="/aboutus">About Us</a>
+                </p>
+                <p>
+                <a href="#!">Career</a>
+                </p>
+                <p>
+                <a href="/contact">Contact Us</a>
+                </p>
+                <p>
+                <a href="/terms-and-services">Terms/Services</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto" id="footer-left">
+                <br>
+                <p>
+                <a href="/learner">Learners</a>
+                </p>
+                <p>
+                <a href="/facilitator">Facilitators</a>
+                </p>
+                <p>
+                <a href="#!">Campus</a>
+                </p>
+                <p>
+                <a href="#!">Corporates</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 social" id="footer-left">
+            <h6 class="text-uppercase font-weight-bold">Our App</h6>
+            <hr class="mb-2 mt-0 d-inline-block mx-auto" style="width: 20px;">
+            <p>
+            <a href="https://www.apple.com/ios/app-store/"><i class="fa fa-apple mr-1" style="font-size: 20px;"></i> IOS Store</a>
+            </p>
+            <p>
+            <a href="https://play.google.com/store"><img class="mr-1" src="{% static 'LandingPage/img/play-store.svg' %}" width="20px" height="20px"> Andriod Store</a>
+            </p>
+        </div>
+
+    </div>
+
+
+        <hr class="mb-4 mt-0 d-inline-block mx-auto text-sm-lef" style="width: 100%; height: 1px; background-color: #3db166;">
+
+        <div class="row d-flex align-items-center">
+
+        <div class="col-md-7 col-lg-8">
+            <p class="text-center text-md-left text-sm-left">© 2020 Copyright:
+            <a href="#" style="font-size:11px">
+                <strong> TMHM Consulting Services Pvt.Ltd</strong>
+            </a>
+            </p>
+        </div>
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+            <div class="text-center text-md-right text-sm-left" id="social">
+
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-wordpress"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-youtube-play"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fa fa-facebook-f"></i>
+                </a>
+                </li>
+            </ul>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+    <!-- loader -->
+
+
+    <script src="{% static 'campus/js/jquery.min.js'%}"></script>
+    <script src="{% static 'campus/js/jquery-migrate-3.0.1.min.js'%}"></script>
+    <script src="{%static 'campus/js/popper.min.js'%}"></script>
+    <script src="{% static 'campus/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'campus/js/jquery.easing.1.3.js'%}"></script>
+    <script src="{% static 'campus/js/jquery.waypoints.min.js'%}"></script>
+    <script src="{% static 'campus/js/jquery.stellar.min.js'%}"></script>
+    <script src="{% static 'campus/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'campus/js/jquery.magnific-popup.min.js'%}"></script>
+    <script src="{% static 'campus/js/aos.js'%}"></script>
+    <script src="{% static 'campus/js/jquery.animateNumber.min.js'%}"></script>
+    <script src="{% static 'campus/js/scrollax.min.js'%}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{% static 'campus/js/google-map.js'%}"></script>
+    <script src="{% static 'campus/js/main.js'%}"></script>
+    <script>
+      $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+
+            $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+        });
+    </script>
+</body>
+
+</html>

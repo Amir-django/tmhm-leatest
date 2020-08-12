@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Facilitator</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'LandingPage/img/logotiny.png' %}" rel="icon">
+  <link href="{% static 'LandingPage/img/logotiny.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'facilitators/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'facilitators/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'facilitators/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+  <link href="{% static 'facilitators/vendor/remixicon/remixicon.css'%}" rel="stylesheet">
+  <link href="{% static 'facilitators/vendor/owl.carousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+  <link href="{% static 'facilitators/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+  <link href="{% static 'facilitators/vendor/aos/aos.css'%}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'facilitators/css/style.css'%}" rel="stylesheet">
+  <link href="{% static 'facilitators/css/fontawesome.css'%}" rel="stylesheet">
+  
+  <style>
+body,html {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Raleway;
+}
+#faqs-hidden{
+  display: none;
+}
+#trainers a{
+    height: 4rem;
+    font-weight: 600;
+    color: #7d97ad;
+}
+#trainers a:hover{
+  color: black;
+  background: #eeeeee;
+}
+#trainers a.active{
+  border-left: inset;
+  font-weight: 600;
+  color: #black;
+  text-decoration: none; 
+  background: transparent; 
+}
+
+#headingOne button, 
+#headingTwo button,
+#headingThree button, 
+#headingFour button,
+#headingFive button, 
+#headingSix button {
+  font-weight: 600;
+  color: #7d97ad;
+  text-decoration: none;
+}
+
+#headingOne button:hover,
+#headingTwo button:hover,
+#headingThree button:hover, 
+#headingFour button:hover, 
+#headingFive button:hover, 
+#headingSix button:hover {
+  color: black;
+  background: #eeeeee;
+}
+
+#card1,#card2,#card3,#card4,#card5,#card6{
+  display: none;
+}
+
+footer{
+    background-image: linear-gradient(to bottom right, #f7f7f7, #eafbff);
+    color:#757575;
+    font-size: 13px;
+    line-height: 1.2
+}
+footer h6{
+    color: #9e9e9e;
+}
+footer a, #navbar-left a{
+  color: black;
+}
+footer a:link{
+  text-decoration: none;
+}
+footer a:hover, #navbar-left a:hover{
+  color: #757575;
+}
+footer #social i{
+  color: black;
+  font-size: 1.2rem;
+}
+footer #social i:hover{
+  color: #3db166;
+}
+  @media (max-width: 768px) {
+      #navbar-left{
+          display: block;
+      }
+      #first {
+          padding-top: 2px;
+          padding-bottom: 2px;
+          line-height: 12px;
+      }
+      .container-fluid{
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+      }
+      .section-a img{
+          padding: 0;
+      }
+      footer{
+          font-size: 7.2px;
+      }
+  }
+  @media (max-width: 990px){
+      #navbar-left{
+          display: block;
+      }
+      #navbar-left form{
+          display: none;
+      }
+      .section-a{
+          margin-bottom: 32px;
+      }
+      .section-a img{
+          margin: 32px;
+      }
+      .section-a #section-a-learn h2,h3{
+          font-size: 31px;
+      }
+      .section-a #section-a-learn h4{
+          font-size: 15px;
+      }
+      #query{
+          margin-left: 11em;
+      }
+      #query_request{
+          text-align: center !important;
+      }
+      footer{
+          font-size: 7.2px;
+      }
+  }
+  @media (max-width: 375px){
+      #query{
+          margin-left: 0 !important;
+      }
+  }
+  @media all and (max-width: 765px){
+      footer{
+          font-size: 1rem;
+      }
+      #query{
+          margin-left: 1.5em;
+      }
+      #footer-left{
+          padding-left: 3em;
+          text-align: left;
+      }
+  }
+  @media all and (max-width: 767px){
+    #card1,#card2,#card3,#card4,#card5,#card6{
+      display: block;
+    }
+    #maihuna{
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 1000px){
+      #logo{
+          margin-left:10px!important;
+      }
+  }
+
+  @media only screen and (max-width: 1080px){
+      #request{
+          align-items: center;
+          justify-content: center;
+          text-align:center;
+      }
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <figure class="figure" style="margin-right: 11px;margin-top: 18px;margin-bottom: 11px;margin-left: 15px;">
+        <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;">
+        <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+    </figure>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #f7f7f7;">
+        <div class="container">
+            <a class="navbar-brand" href="/home"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampl">
+                        Free Content
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav justify-content-end text-sm-left" id="navbar-left">
+                    
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" style="padding-left: 0;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/facilitator-register" class="btn btn-primary rounded" style="color: white">Register <i class="icofont-circled-right"></i></a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-size: 13px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel"><strong>Sign In</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form style="padding-right: 80px; padding-left: 80px;" action="" method="POST" id="loginform">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address / Phone Number">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" name="password" data-toggle="password" placeholder="Password" id="password-field">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <p style="font-size: 8.5px">By clicking Sign In, you agree to our <a href="/hpme">Terms of Use</a> and our <a href="/home">Privacy Policy.</a></p>
+            </div>
+            <input type="submit" class="btn btn-primary rounded" style="font-size: 12px" value="sign in">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+    {% include 'facilitators/messages.html' %}
+
+    {% block content %} {% endblock content %}
+</div>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Be a <a href="/facilitator-register"> Philanthropist</a></h1>
+      <h2>Learn more, Do-better, Get smarter</h2>
+      <a href="/facilitator-register" class="btn-get-started">Become A Facilitator</a>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Facilitator</h2>
+          <p>Who are Facilitators ?</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{% static 'facilitators/img/about.jpg'%}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <h5>LearnOpad Instructors are <b>established industry professionals</b> who have demonstrated leadership and expertise in cutting-edge tech fields.</h5>
+            <hr>
+
+            <p class="font">
+              Thrive in an immersive course development experience that combines industry visionaries with our team of instructional design and pedagogical experts.
+            </p>
+
+            <ul>
+              <li><i class="icofont-check-circled"></i> Industry Leaders</li>
+              <li><i class="icofont-check-circled"></i> Committed Educators</li>
+              <li><i class="icofont-check-circled"></i> Impact-Driven Learners</li>
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3 style="font-size: 1.5rem;">Why become a Facilitator?</h3>
+              <p>
+              We have significant admiration and concern for our facilitators. We never tend to compromise with the comfort of our facilitators and aim to provide them with the required support to help them spread the knowledge.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0 shadow">
+                    <i class="bx bx-receipt"></i>
+                    <h4></h4>
+                    <p>Train students and improve thousands of lives and families across the globe.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0 shadow">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4></h4>
+                    <p>Design your work around your life and develop a course when you want, where you want.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0 shadow">
+                    <i class="bx bx-images"></i>
+                    <h4></h4>
+                    <p>Join a network of industry leaders and market yourself as an expert to companies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Help & FAQ's</h2>
+          <p>Help and Assistance</p>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100" id="maihuna">
+          <div class="row">
+            <div class="col-3" style="height: fit-content; background-color: #fafbfc; padding-right:0;padding-left: 0;">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-Onboarding-tab" data-toggle="pill" href="#v-pills-Onboarding" role="tab" aria-controls="v-pills-Onboarding" aria-selected="true">Onboarding</a>
+                <a class="nav-link" id="v-pills-Courses-tab" data-toggle="pill" href="#v-pills-Courses" role="tab" aria-controls="v-pills-Courses" aria-selected="false">Courses</a>
+                <a class="nav-link" id="v-pills-Benefits-tab" data-toggle="pill" href="#v-pills-Benefits" role="tab" aria-controls="v-pills-Benefits" aria-selected="false">Benefits</a>
+                <a class="nav-link" id="v-pills-Earnings-tab" data-toggle="pill" href="#v-pills-Earnings" role="tab" aria-controls="v-pills-Earnings" aria-selected="false">Earnings</a>
+                <a class="nav-link" id="v-pills-Revocation-tab" data-toggle="pill" href="#v-pills-Revocation" role="tab" aria-controls="v-pills-Revocation" aria-selected="false">Revocation</a>
+                <a class="nav-link" id="v-pills-TroubleShoot-tab" data-toggle="pill" href="#v-pills-TroubleShoot" role="tab" aria-controls="v-pills-TroubleShoot" aria-selected="false">TroubleShoot</a>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-Onboarding" role="tabpanel" aria-labelledby="v-pills-Onboarding-tab">
+                  <p>
+                  Let's spread the knowledge and expertise to millions of students to help them grow knowledge. We are very prudent about our facilitator's privacy and comfort. To join us, follow the below steps:-
+                  </p>
+                  <p><strong>Step 1</strong> :- You are required to fill a form in which we would be seeking your detailed information about you to understand your profile better.
+                  Once we are done with the screening of your profile, we will send you an email acknowledging your application.
+                  </p><p><strong>Step 2</strong> :- We will send a confirmation email and provide you with a link to Google Drive or Dropbox. You can upload your course videos to that drive.
+                  </p><p><strong>Step 3</strong> :- After uploading your course videos to that drive, you need to mail at tmhmfacilitators@gmail.com asserting and confirming us about your upload.
+                  </p>
+                  From there onwards, our team experts will evaluate your content, manner of teaching, communication of information and on the basis of that, you will be selected as our facilitator to help us spread the knowledge.<br>
+                  Link to the Application form :-<br>
+
+                  <button class="btn btn-primary" onclick="window.location.href='/facilitator-register';"> Join Us <i class="icofont-location-arrow"></i></button>
+                </div>
+                <div class="tab-pane fade" id="v-pills-Courses" role="tabpanel" aria-labelledby="v-pills-Courses-tab"> 
+                  <p><strong>Variety of Courses</strong></p>
+                    We tend to offer a variety of courses ranging from academic to training courses in order to keep up with the demand for the recruitment field. 
+                    <ul>
+                      <li>
+                        The course you choose should have a demand in the market.
+                      </li>
+                      <li>
+                        The course should be simple to understand.
+                      </li>
+                      <li>
+                        The content should be to the point and with several examples.
+                      </li>
+                      <li>
+                        Content should be authentic and any kind of discrepancy with facts will not be tolerated.
+                      </li>
+                      <li>
+                        Make sure that the quality of voice and video to be satisfactory.
+                      </li>
+                    </ul>
+                  <p><strong>Mode</strong></p>
+                    Our Courses are meant to be fun and with promising quality. Thus, the manner of executing the courses is expected to be the best. We tend to conduct our courses with the aid of presentations, short videos of facilitators and also in various other ways. We are open to all different possible ways of e-learning with the best quality of content. We don't welcome any means which can lead to any kind of communication difficulty.
+                    We also support our facilitators with a variety of sessions in which we can clarify and train them on the ways of conducting quizzes, assignments, and tests and on how to keep the students engaged.
+                </div>
+                <div class="tab-pane fade" id="v-pills-Benefits" role="tabpanel" aria-labelledby="v-pills-Benefits-tab">
+                  We have significant admiration and concern for our facilitators. We never tend to compromise with the comfort of our facilitators and aim to provide them with the required support to help them spread the knowledge. 
+                  <br>
+                  With bestowing knowledge to others, you will also reap enormous benefits. We have listed down few advantages you will get by becoming our facilitator:-
+                    <ul>
+                      <li>
+                        Experience the inexperienced bliss of teaching a diversity of students from around the world.
+                      </li>
+                      <li>
+                        Learn a new thing every day; we always aid our facilitators with new training programs to help them enhance their skills.
+                      </li>
+                      <li>
+                        There is massive flexibility in our working hours. 
+                      </li>
+                      <li>
+                        You can earn as per your ratings, the number of students enrolled in your course and the quality of your content. To simplify, your efforts are parallel with your earnings.
+                      </li>
+                      <li>
+                        We often conduct e-Get Together where you can have a chance to be in conversation with experienced folks.
+                      </li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="v-pills-Earnings" role="tabpanel" aria-labelledby="v-pills-Earnings-tab">
+                  You can earn from the comfort of your home and can quench the thirst of knowledge of our learners with the reservoir of your expertise & wisdom. 
+                  As proportionate to the number of students enrolled in your course you will be getting a percentage of it in your provided bank account within 7 working days.
+                </div>
+                <div class="tab-pane fade" id="v-pills-Revocation" role="tabpanel" aria-labelledby="v-pills-Revocation-tab">
+                  <p>We understand that some time due to unpreventable situations, one will not be able to continue as our facilitator. We won’t worsen the situation with any stringent policies. You just need to send us a letter stating the reason on why you want to have a break from the role of facilitator. We will try our best to help you with the same.
+                  </p>
+                  As you opt for taking a break, your courses will be available online for students but with no live sessions or answers to the question. And eventually, the price of the course will be decreased and if any student gets enrolled in that course then we will credit a certain percentage to your account.
+                  <p>Whenever you want to rejoin, you simply can. Follow this link to fill the rejoining application form.</p>
+                  
+                  <button class="btn btn-primary" href="/facilitator-register" onclick="window.location.href='/facilitator-register';"> Join Us <i class="icofont-location-arrow"></i></button>
+                </div>
+                <div class="tab-pane fade" id="v-pills-TroubleShoot" role="tabpanel" aria-labelledby="v-pills-TroubleShoot-tab">
+                  <p><strong>Uploading Videos</strong></p>
+                    If you are facing any kind of issue while uploading the videos, you can follow the below steps-
+                    <ul>
+                      <li>
+                        Check your Internet connection.
+                      </li>
+                      <li>
+                        Check the video, if the video is too long then it may take time to upload.
+                      </li>
+                      <li>
+                        Try to refresh your dashboard and upload.	
+                      </li>
+                    </ul>
+                    If you are still facing any issue, you can contact our support team.
+                  <p><strong>Live Sessions</strong></p>
+                    If you’re facing any kind of issue in live sessions, you can follow the below steps -
+                    <ul>
+                      <li>
+                        Check your Internet connection.
+                      </li>
+                      <li>
+                        Check whether you have given all the required permissions to our application.
+                      </li>
+                      <li>
+                        Check if you have any other video chat going on.
+                      </li>
+                    </ul>
+                    If you are still facing any problem then you can contact our support team.
+                  <p><strong>Earnings</strong></p> 
+                    If you encounter any kind of discrepancy between your earnings then you may need to check your
+                     dashboard for detailed information. If the problem still persists, 
+                    then you can write us at tmhmfacilatators@gmail.com.
+
+                    <p>We will try to get back to you as soon as possible.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion" id="accordionExample">
+          <div class="card" id="card1">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Onboarding
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <p>
+                  Let's spread the knowledge and expertise to millions of students to help them grow knowledge. We are very prudent about our facilitator's privacy and comfort. To join us, follow the below steps:-
+                  </p>
+                  <p><strong>Step 1</strong> :- You are required to fill a form in which we would be seeking your detailed information about you to understand your profile better.
+                  Once we are done with the screening of your profile, we will send you an email acknowledging your application.
+                  </p><p><strong>Step 2</strong> :- We will send a confirmation email and provide you with a link to Google Drive or Dropbox. You can upload your course videos to that drive.
+                  </p><p><strong>Step 3</strong> :- After uploading your course videos to that drive, you need to mail at tmhmfacilitators@gmail.com asserting and confirming us about your upload.
+                  </p>
+                  From there onwards, our team experts will evaluate your content, manner of teaching, communication of information and on the basis of that, you will be selected as our facilitator to help us spread the knowledge.<br>
+                  Link to the Application form :-<br>
+
+                  <button class="btn btn-primary" href="/facilitator-register" onclick="window.location.href='/facilitator-register';"> Join Us <i class="icofont-location-arrow"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="card" id="card2">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Courses
+                </button>
+              </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                <p><strong>Variety of Courses</strong></p>
+                    We tend to offer a variety of courses ranging from academic to training courses in order to keep up with the demand for the recruitment field. 
+                    <ul>
+                      <li>
+                        The course you choose should have a demand in the market.
+                      </li>
+                      <li>
+                        The course should be simple to understand.
+                      </li>
+                      <li>
+                        The content should be to the point and with several examples.
+                      </li>
+                      <li>
+                        Content should be authentic and any kind of discrepancy with facts will not be tolerated.
+                      </li>
+                      <li>
+                        Make sure that the quality of voice and video to be satisfactory.
+                      </li>
+                    </ul>
+                  <p><strong>Mode</strong></p>
+                    Our Courses are meant to be fun and with promising quality. Thus, the manner of executing the courses is expected to be the best. We tend to conduct our courses with the aid of presentations, short videos of facilitators and also in various other ways. We are open to all different possible ways of e-learning with the best quality of content. We don't welcome any means which can lead to any kind of communication difficulty.
+                    We also support our facilitators with a variety of sessions in which we can clarify and train them on the ways of conducting quizzes, assignments, and tests and on how to keep the students engaged.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card" id="card3">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Benefits
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                 We have significant admiration and concern for our facilitators. We never tend to compromise with the comfort of our facilitators and aim to provide them with the required support to help them spread the knowledge. 
+                  <br>
+                  With bestowing knowledge to others, you will also reap enormous benefits. We have listed down few advantages you will get by becoming our facilitator:-
+                    <ul>
+                      <li>
+                        Experience the inexperienced bliss of teaching a diversity of students from around the world.
+                      </li>
+                      <li>
+                        Learn a new thing every day; we always aid our facilitators with new training programs to help them enhance their skills.
+                      </li>
+                      <li>
+                        There is massive flexibility in our working hours. 
+                      </li>
+                      <li>
+                        You can earn as per your ratings, the number of students enrolled in your course and the quality of your content. To simplify, your efforts are parallel with your earnings.
+                      </li>
+                      <li>
+                        We often conduct e-Get Together where you can have a chance to be in conversation with experienced folks.
+                      </li>
+                    </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card4">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Earnings
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+              <div class="card-body">
+                You can earn from the comfort of your home and can quench the thirst of knowledge of our learners with the reservoir of your expertise & wisdom. 
+                As proportionate to the number of students enrolled in your course you will be getting a percentage of it in your provided bank account within 7 working days.
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card5">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  Revocation
+                </button>
+              </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+              <div class="card-body">
+                You can earn from the comfort of your home and can quench the thirst of knowledge of our learners with the reservoir of your expertise & wisdom. 
+                  As proportionate to the number of students enrolled in your course you will be getting a percentage of it in your provided bank account within 7 working days.
+                </div>
+                <div class="tab-pane fade" id="v-pills-Revocation" role="tabpanel" aria-labelledby="v-pills-Revocation-tab">
+                  <p>We understand that some time due to unpreventable situations, one will not be able to continue as our facilitator. We won’t worsen the situation with any stringent policies. You just need to send us a letter stating the reason on why you want to have a break from the role of facilitator. We will try our best to help you with the same.
+                  </p>
+                  As you opt for taking a break, your courses will be available online for students but with no live sessions or answers to the question. And eventually, the price of the course will be decreased and if any student gets enrolled in that course then we will credit a certain percentage to your account.
+                  <p>Whenever you want to rejoin, you simply can. Follow this link to fill the rejoining application form.</p>
+
+                  <button class="btn btn-primary" href="/facilitator-register" onclick="window.location.href='/facilitator-register';"> Join Us <i class="icofont-location-arrow"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card6">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  TroubleShoot
+                </button>
+              </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+              <div class="card-body">
+                <p><strong>Uploading Videos</strong></p>
+                    If you are facing any kind of issue while uploading the videos, you can follow the below steps-
+                    <ul>
+                      <li>
+                        Check your Internet connection.
+                      </li>
+                      <li>
+                        Check the video, if the video is too long then it may take time to upload.
+                      </li>
+                      <li>
+                        Try to refresh your dashboard and upload.	
+                      </li>
+                    </ul>
+                    If you are still facing any issue, you can contact our support team.
+                  <p><strong>Live Sessions</strong></p>
+                    If you’re facing any kind of issue in live sessions, you can follow the below steps -
+                    <ul>
+                      <li>
+                        Check your Internet connection.
+                      </li>
+                      <li>
+                        Check whether you have given all the required permissions to our application.
+                      </li>
+                      <li>
+                        Check if you have any other video chat going on.
+                      </li>
+                    </ul>
+                    If you are still facing any problem then you can contact our support team.
+                  <p><strong>Earnings</strong></p> 
+                    If you encounter any kind of discrepancy between your earnings then you may need to check your
+                     dashboard for detailed information. If the problem still persists, 
+                    then you can write us at tmhmfacilatators@gmail.com.
+
+                    <p>We will try to get back to you as soon as possible.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  
+    <!-- End Trainers Section -->
+<section id="faqs" class="faqs">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <p>Frequently Asked Questions</p>
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-7 pt-4 pt-lg-0 order-2 order-lg-1 content">
+
+        <h5>What is the procedure to collaborate as a facilitator with TMHM ?</h5>
+        <p class="font-italic">
+          The procedure is elementary, just go to the sign-in page and fill in your details. Upon fulfilling the requirements of TMHM, we will contact you shortly. 
+        </p>
+        <hr>
+
+        <div id="faqs-hidden" style="display: none;">
+          <h5>What is the minimum qualification and experience that is needed to be a part of the organization as an educator ?</h5>
+          <p class="font">
+            To qualify for collaboration you must hold 3 years of experience in the teaching field.
+            Understanding child psychology and intacting the attention of the user is a must. When contacted, you should be able to produce the certificates if needed. 
+          </p>
+          <hr>
+          <h5>Do I need to create the courses ?</h5>
+          <p class="font">
+            Yes, all the facilitators are required to create courses for learners on the portal in the respective fields.  
+          </p>
+          <hr>
+          <h5>How much time do I have to give to learners per day ?</h5>
+          <p class="font">
+            In the beginning, it is very uncertain to give specific timings. Ideally it depends on the needs of the learners and their queries, if any.    
+          </p>
+          <hr>
+          <h5>Do I have to take up live sessions regularly ?</h5>
+          <p class="font">
+            Generally, it is as per the discipline you choose and the time limit you set for learners for the completion of the course.
+            You may take it on a daily basis once, twice, or on a weekly basis, it all depends on the discipline you choose. 
+          </p>
+          <hr>
+          <h5>How would I know that if there is any sign-up for any of my courses?</h5>
+          <p class="font">
+            You will be informed through your dashboard for the discipline you opt for teaching and per dashboard you will be informed about the number of learners enrolled for the course. 
+          </p>
+          <hr>
+          <h5>Can I take up any other training assignments while I work with TMHM ?</h5>
+          <p class="font">
+            Yes, being a freelance trainer, you are free to take up any other assignments. However, you shall use different content for your course titles, description, etc
+          </p>
+          <hr>
+          <h5>Can I create more than one course from any category and conduct them simultaneously ?</h5>
+          <p class="font">
+            Yes, as per your capability and qualification you can create as many courses as you want to teach through your dashboard. 
+          </p>
+          <hr>
+          <h5>Do I need to record video sessions and send them to you ?</h5>
+          <p class="font">
+            In the near future after finishing the live-session period you have to create customized video lessons for the learners.
+          </p>
+          <hr>
+          <h5>When do I get my payments and what is the procedure for the same ?</h5>
+          <p class="font">
+            Payments are made completely on the performance basis and as per the terms and condition, you sign with us when you are selected.
+          </p>
+
+
+        </div>
+
+          <button class="btn btn-outline-primary" onclick="change()" id="mybtn" value="my value">SHOW MORE</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+  </main><!-- End #main -->
+<div class="height:5em"></div>
+  <!-- ======= Footer ======= -->
+  <footer class="page-footer font-small pt-4">
+      <div class="container text-center text-md-left">
+          <div class="row text-center text-md-left pb-3" style="background: transparent;">
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                  <figure class="figure" style="margin: 11px;">
+                      <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;width: 60px; height: 40px;">
+                      <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+                  </figure>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none">
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                  <p>
+                  <a href="/aboutus">About Us</a>
+                  </p>
+                  <p>
+                  <a href="#!">Career</a>
+                  </p>
+                  <p>
+                  <a href="/contact">Contact Us</a>
+                  </p>
+                  <p>
+                  <a href="/terms-and-services">Terms/Services</a>
+                  </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none">
+
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto" id="footer-left">
+                  <br>
+                  <p>
+                  <a href="/learner">Learners</a>
+                  </p>
+                  <p>
+                  <a href="/facilitator">Facilitators</a>
+                  </p>
+                  <p>
+                  <a href="/campus">Campus</a>
+                  </p>
+                  <p>
+                  <a href="#!">Corporates</a>
+                  </p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none">
+
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 social" id="footer-left">
+              <h6 class="text-uppercase font-weight-bold">Our App</h6>
+              <hr class="mb-2 mt-0 d-inline-block mx-auto" style="width: 20px;">
+              <p>
+              <a href="https://www.apple.com/ios/app-store/"><i class="icofont-brand-apple" style="font-size: 20px;"></i> IOS Store</a>
+              </p>
+              <p>
+              <a href="https://play.google.com/store"><img class="mr-1" src="{% static 'LandingPage/img/play-store.svg' %}" width="20px" height="20px"> Andriod Store</a>
+              </p>
+          </div>
+
+      </div>
+
+
+          <hr class="mb-4 mt-0 d-inline-block mx-auto text-sm-lef" style="width: 100%; height: 1px; background-color: #3db166;">
+
+          <div class="row d-flex align-items-center">
+
+          <div class="col-md-7 col-lg-8">
+              <p class="text-center text-md-left text-sm-left">© 2020 Copyright:
+              <a href="#" style="font-size:11px">
+                  <strong> TMHM Consulting Services Pvt.Ltd</strong>
+              </a>
+              </p>
+          </div>
+          <div class="col-md-5 col-lg-4 ml-lg-0">
+              <div class="text-center text-md-right text-sm-left" id="social">
+
+              <ul class="list-unstyled list-inline">
+                  <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="icofont-brand-wordpress"></i>
+                  </a>
+                  </li>
+                  <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="icofont-youtube-play"></i>
+                  </a>
+                  </li>
+                  <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="icofont-instagram"></i>
+                  </a>
+                  </li>
+                  <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="icofont-linkedin"></i>
+                  </a>
+                  </li>
+                  <li class="list-inline-item">
+                  <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                      <i class="icofont-facebook"></i>
+                  </a>
+                  </li>
+              </ul>
+              </div>
+
+          </div>
+
+          </div>
+      </div>
+
+  </footer>
+
+  <!--<a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>-->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'facilitators/vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'facilitators/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'facilitators/vendor/jquery.easing/jquery.easing.min.js'%}"></script>
+  <script src="{% static 'facilitators/vendor/php-email-form/validate.js'%}"></script>
+  <script src="{% static 'facilitators/vendor/waypoints/jquery.waypoints.min.js'%}"></script>
+  <script src="{% static 'facilitators/vendor/counterup/counterup.min.js'%}"></script>
+  <script src="{% static 'facilitators/vendor/owl.carousel/owl.carousel.min.js'%}"></script>
+  <script src="{% static 'facilitators/vendor/aos/aos.js'%}"></script>
+  <script src="{% static 'facilitators/js/main.js'%}"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+  <script>
+    setTimeout(function(){
+      if ($('#msg').length > 0) {
+        $('#msg').remove();
+      }
+    }, 2000)
+
+    function change() {
+      var elem = document.getElementById("mybtn");
+      var x = document.getElementById("faqs-hidden");
+
+        if (x.style.display === "none" && elem.innerHTML === "SHOW MORE") {
+          elem.innerHTML = "SHOW LESS"; x.style.display = "block";
+          } else {
+          elem.innerHTML = "SHOW MORE"; x.style.display = "none";
+      }
+    }
+
+      $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+
+            $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+        });
+  </script>
+</body>
+
+</html>

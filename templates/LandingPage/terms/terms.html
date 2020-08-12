@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<head>
+
+    <link href="{% static 'LandingPage/img/logotiny.png' %}" rel="icon">
+    <title>Terms And Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+    <link rel="stylesheet" href="{% static 'LandingPage/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'LandingPage/css/owl.theme.default.min.css' %}">
+    <style>
+    body,html {
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: Raleway;
+    }
+    #navbar-left a{
+        text-decoration: none;
+        color: #ababab;
+    }
+    #navbar-left a:hover{
+        color: black;
+    }
+    #navbar-left button{
+        color: white;
+    }
+    .jumbotron{
+        height: 25em;
+    }
+    #trainers a{
+    height: 4rem;
+    font-weight: 600;
+    color: #7d97ad;
+    }
+    #trainers a:hover{
+    color: black;
+    background: #eeeeee;
+    }
+    #trainers a.active{
+    border-left: inset;
+    font-weight: 600;
+    color: #black;
+    text-decoration: none; 
+    background: transparent; 
+    }
+
+    #headingOne button, 
+    #headingTwo button,
+    #headingThree button, 
+    #headingFour button,
+    #headingFive button, 
+    #headingSix button,
+    #heading7 button,
+    #heading8 button,
+    #heading9 button,
+    #heading10 button,
+    #heading11 button,
+    #heading12 button,
+    #heading13 button {
+    font-weight: 600;
+    color: #7d97ad;
+    text-decoration: none;
+    }
+
+    #headingOne button:hover,
+    #headingTwo button:hover,
+    #headingThree button:hover, 
+    #headingFour button:hover, 
+    #headingFive button:hover, 
+    #headingSix button:hover,
+    #heading7 button:hover,
+    #heading8 button:hover,
+    #heading9 button:hover,
+    #heading10 button:hover,
+    #heading11 button:hover,
+    #heading12 button:hover,
+    #heading13 button:hover{
+    color: black;
+    background: #eeeeee;
+    }
+
+    #card1,#card2,#card3,#card4,#card5,#card6,#card7,#card8,#card9,#card10,#card11,#card12,#card13{
+    display: none;
+    }
+
+    footer{
+        background-image: linear-gradient(to bottom right, #f7f7f7, #eafbff);
+        color:#757575;
+        font-size: 13px;
+        line-height: 1.2
+    }
+    footer h6{
+        color: #9e9e9e;
+    }
+    footer a{
+        color: black;
+    }
+    footer a:link{
+        text-decoration: none;
+    }
+    footer a:hover{
+        color: #757575;
+    }
+    footer #social i{
+        color: black;
+        font-size: 1.2rem;
+    }
+    footer #social i:hover{
+        color: #3db166;
+    }
+    @media all and (max-width: 767px){
+        #card1,#card2,#card3,#card4,#card5,#card6,#card7,#card8,#card9,#card10,#card11,#card12,#card13{
+        display: block;
+        }
+        #maihuna{
+        display: none;
+        }
+    }
+    @media (max-width: 768px) {
+        #navbar-left{
+            display: block;
+        }
+        #first {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            line-height: 12px;
+        }
+        .container-fluid{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+        .section-a img{
+            padding: 0;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 990px){
+        #navbar-left{
+            display: block;
+        }
+        #navbar-left form{
+            display: none;
+        }
+        .section-a{
+            margin-bottom: 32px;
+        }
+        .section-a img{
+            margin: 32px;
+        }
+        .section-a #section-a-learn h2,h3{
+            font-size: 31px;
+        }
+        .section-a #section-a-learn h4{
+            font-size: 15px;
+        }
+        #query{
+            margin-left: 11em;
+        }
+        #query_request{
+            text-align: center !important;
+        }
+        footer{
+            font-size: 7.2px;
+        }
+    }
+    @media (max-width: 375px){
+        #query{
+            margin-left: 0 !important;
+        }
+    }
+    @media all and (max-width: 765px){
+        footer{
+            font-size: 1rem;
+        }
+        #query{
+            margin-left: 1.5em;
+        }
+        #footer-left{
+            padding-left: 3em;
+            text-align: left;
+        }
+    }
+    
+
+    @media only screen and (max-width: 1080px){
+        #request{
+            align-items: center;
+            justify-content: center;
+            text-align:center;
+        }
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+    <figure class="figure" style="margin-right: 11px;margin-top: 18px;margin-bottom: 11px;margin-left: 15px;">
+        <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;">
+        <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+    </figure>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: #f7f7f7;">
+        <div class="container">
+            <a class="navbar-brand" href="/home"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" data-toggle="modal" data-target="#exampl">
+                        Free Content
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav justify-content-end text-sm-left" id="navbar-left">
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModal" style="padding-left: 0;">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/signup" class="btn btn-primary rounded" style="color: white">Sign Up</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="font-size: 13px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel"><strong>Sign In</strong></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form style="padding-right: 80px; padding-left: 80px;">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address / Phone Number">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="password" class="form-control" data-toggle="password" placeholder="Password" id="password-field">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <p style="font-size: 8.5px">By clicking Sign In, you agree to our <a href="/hpme">Terms of Use</a> and our <a href="/home">Privacy Policy.</a></p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block" style="font-size: 12px">SIGN IN</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ********************************* -->
+<div class="jumbotron jumbotron-fluid" style="background: url('{% static 'LandingPage/img/section/home_slider.jpg'%}')">
+  <div class="container" style="margin-top: 5em;">
+    <h1 class="text-center" style="font-weight:600; color: white">LearnOpad</h1>
+    <p class="lead text-center" style="font-size: 1.75rem; font-weight:500; color: white"> Terms & Conditions </p>
+  </div>
+</div>
+<!-- ********************************* -->
+
+    <section id="trainers" class="trainers">
+        <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <div style="margin-top: 5rem;"></div>
+        </div>
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100" id="maihuna">
+          <div class="row">
+            <div class="col-3" style="height: fit-content; background-color: #fafbfc; padding-right:0;padding-left: 0;">
+              <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-Definition-tab" data-toggle="pill" href="#v-pills-Definition" role="tab" aria-controls="v-pills-Definition" aria-selected="true">Definition</a>
+                <a class="nav-link" id="v-pills-Services-tab" data-toggle="pill" href="#v-pills-Services" role="tab" aria-controls="v-pills-Services" aria-selected="false">Services</a>
+                <a class="nav-link" id="v-pills-OrderingServices-tab" data-toggle="pill" href="#v-pills-OrderingServices" role="tab" aria-controls="v-pills-OrderingServices" aria-selected="false">Ordering Services</a>
+                <a class="nav-link" id="v-pills-Cancellation-tab" data-toggle="pill" href="#v-pills-Cancellation" role="tab" aria-controls="v-pills-Cancellation" aria-selected="false">Cancellation</a>
+                <a class="nav-link" id="v-pills-Fees-tab" data-toggle="pill" href="#v-pills-Fees" role="tab" aria-controls="v-pills-Fees" aria-selected="false">Fees</a>
+                <a class="nav-link" id="v-pills-Liability-tab" data-toggle="pill" href="#v-pills-Liability" role="tab" aria-controls="v-pills-Liability" aria-selected="false">Liability</a>
+                <a class="nav-link" id="v-pills-Intellectual-tab" data-toggle="pill" href="#v-pills-Intellectual" role="tab" aria-controls="v-pills-Intellectual" aria-selected="true">Intellectual Property</a>
+                <a class="nav-link" id="v-pills-Confidentiality-tab" data-toggle="pill" href="#v-pills-Confidentiality" role="tab" aria-controls="v-pills-Confidentiality" aria-selected="false">Confidentiality</a>
+                <a class="nav-link" id="v-pills-Termination-tab" data-toggle="pill" href="#v-pills-Termination" role="tab" aria-controls="v-pills-Termination" aria-selected="false">Termination</a>
+                <a class="nav-link" id="v-pills-Assignments-tab" data-toggle="pill" href="#v-pills-Assignments" role="tab" aria-controls="v-pills-Assignments" aria-selected="false">Assignments</a>
+                <a class="nav-link" id="v-pills-Agreement-tab" data-toggle="pill" href="#v-pills-Agreement" role="tab" aria-controls="v-pills-Agreement" aria-selected="false">Agreement</a>
+                <a class="nav-link" id="v-pills-Protection-tab" data-toggle="pill" href="#v-pills-Protection" role="tab" aria-controls="v-pills-Protection" aria-selected="false">Data Protection</a>
+                <a class="nav-link" id="v-pills-Notices-tab" data-toggle="pill" href="#v-pills-Notices" role="tab" aria-controls="v-pills-Notices" aria-selected="true">Notices</a>
+              </div>
+            </div>
+            <div class="col-9">
+              <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-Definition" role="tabpanel" aria-labelledby="v-pills-Definition-tab">
+                <h2>Definition</h2>
+                <p>
+                “Confidential Information” means information provided by one party to the other in written, graphic, recorded, machine readable or other form concerning the business, clients, suppliers, finances and other areas of the other party’s business or products, including, without limitation, the Course Materials, but does not include information in the public domain other than through the default of the party disclosing the information, information required to be disclosed by any court or regulatory authority, or any information already in the possession or control of the disclosing party.
+                </p><p>
+                “Course Materials” means the information provided by TMHM Consulting Services Private Limited to accompany a course provided as part of the Services in electronic form.
+                </p><p>
+                “Fees” means the fees paid by you to TMHM Consulting Services Private Limited for the Services.
+                </p><p>
+                “Intellectual Property Rights” means copyright, rights in or relating to databases, patent rights, performers’ rights, designs and registered designs, trademarks, rights in or relating to Confidential Information and other intellectual property rights (registered or unregistered) throughout the world.
+                </p><p>
+                “Online Course” means the delivery by us of an online course pursuant to which you learn course materials remotely.
+                </p><p>
+                “Services” means the provision of the Online Course with such other services as agreed from time to time and purchased by you through the Website.
+                </p><p>
+                “You” means the individual purchasing the Services.
+                </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Services" role="tabpanel" aria-labelledby="v-pills-Services-tab"> 
+                    <h2>Services</h2>
+                    <p>
+                    A description of the Services together with the dates on which the Services will begin are available on our Website.  We will provide the Services with reasonable care and skill in accordance with the description set out on the Website.
+                    </p><p>
+                    We reserve the right to vary or withdraw any of the Services described on the Website without notice.
+                    </p><p>
+                    We expect you to confirm that the Services you are purchasing will meet your needs.  We do not make any guarantee to you that you will obtain a particular result, professional qualification or employment opportunity from your purchase and completion of any of the Services.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-OrderingServices" role="tabpanel" aria-labelledby="v-pills-OrderingServices-tab">
+                    <h2>Ordering Services</h2>
+                    <p>
+                    In order to purchase any of the Services online you must register for an account with us via the Website.  If you already have an account with us you can log into your account using your user name and password.
+
+                    When you place an order for a Service via the Website, you are offering to purchase the Services on these terms and conditions.  
+                    </p><p>
+                    TMHM Consulting Services Private Limited reserves the right to cancel or decline your order or any part of your order at any time until it has been confirmed in accordance with clause 3.4 below.
+
+                    Following receipt by us of your order for Services via the Website, we will contact you confirming receipt of your order.
+                    </p><p>
+                     A legally binding agreement between us and you shall come into existence when we have: (a)accepted your offer to purchase Services from us by sending you an email confirming the purchase; and (b)received payment of the relevant Fees from you in accordance with clause 5 below. 
+
+                    Where your order consists of multiple Online Courses, each individual course will be treated by us as a separate offer to purchase.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Cancellation" role="tabpanel" aria-labelledby="v-pills-Cancellation-tab">
+                    <h2>Cancellation</h2>
+                    <p>
+                    Subject to clause below, where we have accepted / confirmed the Services being purchased by you and formed a legally binding agreement with you in accordance with clause 3.4 above, then you are permitted within 7 working days starting on the day after the date we have concluded our agreement in accordance with clause 3.3, to cancel your purchase of the Services.
+                    </p><p>
+                   If you have purchased an Online Course and have already accessed, downloaded all or part of the Online Course and/or started to use that Online Course then you shall have no right to cancel your order.
+                    </p><p>
+                    Notwithstanding above clause there is no other right to cancel or vary your purchase of Services and any other cancellation and / or variation of course dates will be at the entire discretion of TMHM Consulting Services Private Limited.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Fees" role="tabpanel" aria-labelledby="v-pills-Fees-tab">
+                    <h2>Fees</h2>
+                    <p>
+                    The Fees for the Services shall be as set out on the Website at the time you placed an order for them.
+
+                    Fees for the Service selected by you on the Website shall be debited from your credit / debit card at the time of purchase.  
+                    </p><p>
+                    Fees must be paid in full prior to you accessing any Online Course.
+
+                    Any fees charged by your debit or credit card provider in connection with your purchase of Services are for your own account and TMHM Consulting Services Private Limited shall not be responsible for these.
+                    </p><p>
+                    You shall be responsible for all costs you incur in connection with your attendance to access onto any Online Course.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Liability" role="tabpanel" aria-labelledby="v-pills-Liability-tab">
+                    <h2>Liability</h2>
+                    <p>
+                    No part of the provision of the Services shall be deemed to be, nor is it intended to be, nor should it be taken to be, the provision of investment advice.
+                    </p><p>
+                    Although TMHM Consulting Services Private Limited aims to provide the Services to the highest standards of the industry, neither it, nor its trainers accept any liability for
+
+                    <ul>
+                    <li>
+                    any inaccuracy or misleading information provided in the program or Course Materials and any reliance by Client on any such information,
+                    </li><li>
+                    any loss or corruption of data,
+                    </li><li>
+                    any loss of profit, revenue or goodwill, or
+                    </li><li>
+                    any indirect, special or consequential loss arising from any breach of the terms of this Agreement.
+                    </li></ul>
+                    Except to the extent that they are expressly set out in these terms and conditions, no conditions, warranties or other terms shall apply to the Services.
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Intellectual" role="tabpanel" aria-labelledby="v-pills-Intellectual-tab">
+                    <h2>Intellectual</h2>
+                    <p>
+                    All Intellectual Property Rights in the Course Materials, Online Courses and the speeches made by trainers are, and remain, the intellectual property of TMHM Consulting Services Private Limited or its licensors, whether adapted, written for or customized for the Client or not.
+                    </p><p>
+                    You are not authorized to:-
+
+                    copy, modify, reproduce, re-publish, sub-licence, sell, upload, broadcast, post, transmit or distribute any of the Course Materials without prior written permission;
+                    recmodify, adapt, merge, translate, disassemble, decompile, reverse engineer (save to the extent permitted by law) any software forming part of the Online Courses. ord on video or audio tape, relay by videophone or other means the Online Course given
+                    use the Course Materials in the provision of any other course or training whether given by us or any third party trainer;
+                    remove any copyright or other notice of TMHM Consulting Services Private Limited on the Course Materials;
+                    modify, adapt, merge, translate, disassemble, decompile, reverse engineer (save to the extent permitted by law) any software forming part of the Online Courses.
+                    Breach by you of this clause shall allow us to immediately terminate these terms and conditions with you and cease to provide you with any Services, including but not limited to access to the Online Courses.
+                    </p><p>
+                    In consideration of the Fees paid by you, we grant to you a limited, non-transferable, non-exclusive licence to use the Course Materials and the software in respect of the Online Course for the sole purpose of completing the Online Course.
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Confidentiality" role="tabpanel" aria-labelledby="v-pills-Confidentiality-tab"> 
+                    <h2>Confidentiality</h2>
+                    <p>
+                    Each party shall keep the other party’s Confidential Information strictly confidential and not use it otherwise than for the purposes of these terms and conditions, and shall return it on demand and not retain copies of it.
+                    </p><p>
+                   Either party may disclose Confidential Information to its legal and other advisors for the purposes of obtaining advice from them.
+                    </p><p>
+                    This clause shall continue notwithstanding termination of these terms and conditions
+                    </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Termination" role="tabpanel" aria-labelledby="v-pills-Termination-tab">
+                    <h2>Termination</h2>
+                    <p>
+                    We shall be entitled to terminate these terms and conditions and cease to provide you with any Services with immediate effect in the event that you:
+                    </p>
+                    <ul><li>
+                    fail to pay when due your Fees;</li><li>
+                    act in an aggressive, bullying, offensive, threatening or harassing manner towards any employee of TMHM Consulting Services Private Limited, any teacher or lecturer who provides the Online Courses or any student who attends any Online Course;
+                    </li><li>
+                    cheat or plagiarize any work which you are required to prepare or submit in connection with the Services or during any examination taken in connection with the Services;
+                    </li><li>
+                    steal or act in fraudulent or deceitful manner towards us or our employees or any other students who may be on our premises or attending our Online Courses
+                    </li><li>
+                    are in breach of these terms and conditions.
+                    </li><li>On termination clause 6 (liability), 7 (intellectual property rights), 8 (confidentiality) and 10 (restrictions) shall continue notwithstanding such termination.
+                    </li></ul>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Assignments" role="tabpanel" aria-labelledby="v-pills-Assignments-tab">
+                    <h2>Assignments</h2>
+                    Any Services provided by us under these terms and conditions are personal to you and cannot be transferred or assigned to any other person.
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Agreement" role="tabpanel" aria-labelledby="v-pills-Agreement-tab">
+                    <h2>Agreement</h2>
+                   <p>
+                    These terms and conditions are the entire agreement between the parties and supersede any prior agreements and arrangements, whether written or oral. 
+                    You confirm that you have not relied on any representations in entering into these and any other terms and conditions with us.  
+                    Nothing in this clause or terms and conditions shall limit liability for any fraudulent misrepresentation.
+                   </p>
+                </div>
+
+                <div class="tab-pane fade" id="v-pills-Protection" role="tabpanel" aria-labelledby="v-pills-Protection-tab">
+                    <h2>Protection</h2>
+                    <p>
+                    The nature of the Services provided by us means that we will obtain, use and disclose (together "Use") certain information about you ("Data"). This statement sets out the principles governing our Use of Data. By purchasing the Services you agree to this Use.
+                    </p><p>
+                    When you register with us you will need to provide certain Data such as your contact details and demographic information. We will store this Data and use it to contact you, provide you with details of the Services you have purchased and otherwise as required during the normal provision of the course.
+                    </p><p>
+                    We may also use the above Data, and similar Data you provide us in response to surveys, to aggregate user profiles and, unless you click on the relevant button on the Registration Form, provide you with communications. We will not pass any personal data onto anyone outside of TMHM Consulting Services Private Limited
+                    </p><p>
+                    We use information such as your User ID, session identifiers and password to enable us to identify whether you are using our services, assist with the provision of services and to ensure that you have access to relevant products. We will only read cookies from your cookie file placed there through your web browser's interaction with the Website.
+                    </p><p>
+                    TMHM Consulting Services Private Limited endeavour to take all reasonable steps to protect your personal Data including the use of encryption technology, but cannot guarantee the security of any Data you disclose. You accept the inherent security implications of being and transacting online over the internet and will not hold us responsible for any breach of security.
+                    </p><p>
+                    TMHM Consulting Services Private Limited may supplement the information that you provide with information we receive from third parties, such as exam registration bodies or your employer.
+                    </p><p>
+                    If you wish to change or update the data we hold about you, please e-mail <a href="mailto:info@tmhm.in">info@tmhm.in</a>
+                    or contact us on <a href="tel:+91 8179992806">+91 8179992806</a>
+                </div>
+                
+                <div class="tab-pane fade" id="v-pills-Notices" role="tabpanel" aria-labelledby="v-pills-Notices-tab">
+                    <h2>Notices</h2>
+                    <p>
+                    You can contact us by any of the following methods:
+                    </p><p>
+                    Email: <a href="mailto:info@tmhm.in">info@tmhm.in</a>
+                    </p><p>
+                    Telephone: <a href="tel:+91 8179992806">+91 8179992806</a>
+                    </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="accordion" id="accordionExample">
+
+            <div class="container">
+                <div class="card" id="card1">
+                <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Definition
+                    </button>
+                </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            “Confidential Information” means information provided by one party to the other in written, graphic, recorded, machine readable or other form concerning the business, clients, suppliers, finances and other areas of the other party’s business or products, including, without limitation, the Course Materials, but does not include information in the public domain other than through the default of the party disclosing the information, information required to be disclosed by any court or regulatory authority, or any information already in the possession or control of the disclosing party.
+                            </p><p>
+                            “Course Materials” means the information provided by TMHM Consulting Services Private Limited to accompany a course provided as part of the Services in electronic form.
+                            </p><p>
+                            “Fees” means the fees paid by you to TMHM Consulting Services Private Limited for the Services.
+                            </p><p>
+                            “Intellectual Property Rights” means copyright, rights in or relating to databases, patent rights, performers’ rights, designs and registered designs, trademarks, rights in or relating to Confidential Information and other intellectual property rights (registered or unregistered) throughout the world.
+                            </p><p>
+                            “Online Course” means the delivery by us of an online course pursuant to which you learn course materials remotely.
+                            </p><p>
+                            “Services” means the provision of the Online Course with such other services as agreed from time to time and purchased by you through the Website.
+                            </p><p>
+                            “You” means the individual purchasing the Services.
+                            </p>
+                            </div>       
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card2">
+                <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Services
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                         <p>
+                    A description of the Services together with the dates on which the Services will begin are available on our Website.  We will provide the Services with reasonable care and skill in accordance with the description set out on the Website.
+                    </p><p>
+                    We reserve the right to vary or withdraw any of the Services described on the Website without notice.
+                    </p><p>
+                    We expect you to confirm that the Services you are purchasing will meet your needs.  We do not make any guarantee to you that you will obtain a particular result, professional qualification or employment opportunity from your purchase and completion of any of the Services.
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card" id="card3">
+                <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Ordering Services
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                    In order to purchase any of the Services online you must register for an account with us via the Website.  If you already have an account with us you can log into your account using your user name and password.
+
+                    When you place an order for a Service via the Website, you are offering to purchase the Services on these terms and conditions.  
+                    </p><p>
+                    TMHM Consulting Services Private Limited reserves the right to cancel or decline your order or any part of your order at any time until it has been confirmed in accordance with clause 3.4 below.
+
+                    Following receipt by us of your order for Services via the Website, we will contact you confirming receipt of your order.
+                    </p><p>
+                     A legally binding agreement between us and you shall come into existence when we have: (a)accepted your offer to purchase Services from us by sending you an email confirming the purchase; and (b)received payment of the relevant Fees from you in accordance with clause 5 below. 
+
+                    Where your order consists of multiple Online Courses, each individual course will be treated by us as a separate offer to purchase.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card4">
+                <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Cancellation
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                    Subject to clause below, where we have accepted / confirmed the Services being purchased by you and formed a legally binding agreement with you in accordance with clause 3.4 above, then you are permitted within 7 working days starting on the day after the date we have concluded our agreement in accordance with clause 3.3, to cancel your purchase of the Services.
+                    </p><p>
+                   If you have purchased an Online Course and have already accessed, downloaded all or part of the Online Course and/or started to use that Online Course then you shall have no right to cancel your order.
+                    </p><p>
+                    Notwithstanding above clause there is no other right to cancel or vary your purchase of Services and any other cancellation and / or variation of course dates will be at the entire discretion of TMHM Consulting Services Private Limited.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card5">
+                <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Fees
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                    The Fees for the Services shall be as set out on the Website at the time you placed an order for them.
+
+                    Fees for the Service selected by you on the Website shall be debited from your credit / debit card at the time of purchase.  
+                    </p><p>
+                    Fees must be paid in full prior to you accessing any Online Course.
+
+                    Any fees charged by your debit or credit card provider in connection with your purchase of Services are for your own account and TMHM Consulting Services Private Limited shall not be responsible for these.
+                    </p><p>
+                    You shall be responsible for all costs you incur in connection with your attendance to access onto any Online Course.
+                    </p
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card6">
+                <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    Liability
+                    </button>
+                </h2>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                    <div class="card-body">
+                       <p>
+                    No part of the provision of the Services shall be deemed to be, nor is it intended to be, nor should it be taken to be, the provision of investment advice.
+                    </p><p>
+                    Although TMHM Consulting Services Private Limited aims to provide the Services to the highest standards of the industry, neither it, nor its trainers accept any liability for
+
+                    <ul>
+                    <li>
+                    any inaccuracy or misleading information provided in the program or Course Materials and any reliance by Client on any such information,
+                    </li><li>
+                    any loss or corruption of data,
+                    </li><li>
+                    any loss of profit, revenue or goodwill, or
+                    </li><li>
+                    any indirect, special or consequential loss arising from any breach of the terms of this Agreement.
+                    </li></ul>
+                    Except to the extent that they are expressly set out in these terms and conditions, no conditions, warranties or other terms shall apply to the Services.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card7">
+                <div class="card-header" id="heading7">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    Intellectual Property
+                    </button>
+                </h2>
+                </div>
+                <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                    All Intellectual Property Rights in the Course Materials, Online Courses and the speeches made by trainers are, and remain, the intellectual property of TMHM Consulting Services Private Limited or its licensors, whether adapted, written for or customized for the Client or not.
+                    </p><p>
+                    You are not authorized to:-
+
+                    copy, modify, reproduce, re-publish, sub-licence, sell, upload, broadcast, post, transmit or distribute any of the Course Materials without prior written permission;
+                    recmodify, adapt, merge, translate, disassemble, decompile, reverse engineer (save to the extent permitted by law) any software forming part of the Online Courses. ord on video or audio tape, relay by videophone or other means the Online Course given
+                    use the Course Materials in the provision of any other course or training whether given by us or any third party trainer;
+                    remove any copyright or other notice of TMHM Consulting Services Private Limited on the Course Materials;
+                    modify, adapt, merge, translate, disassemble, decompile, reverse engineer (save to the extent permitted by law) any software forming part of the Online Courses.
+                    Breach by you of this clause shall allow us to immediately terminate these terms and conditions with you and cease to provide you with any Services, including but not limited to access to the Online Courses.
+                    </p><p>
+                    In consideration of the Fees paid by you, we grant to you a limited, non-transferable, non-exclusive licence to use the Course Materials and the software in respect of the Online Course for the sole purpose of completing the Online Course.
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card8">
+                <div class="card-header" id="heading8">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                    Confidentiality
+                    </button>
+                </h2>
+                </div>
+                <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                    Each party shall keep the other party’s Confidential Information strictly confidential and not use it otherwise than for the purposes of these terms and conditions, and shall return it on demand and not retain copies of it.
+                    </p><p>
+                   Either party may disclose Confidential Information to its legal and other advisors for the purposes of obtaining advice from them.
+                    </p><p>
+                    This clause shall continue notwithstanding termination of these terms and conditions
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+            <div class="card" id="card9">
+                <div class="card-header" id="heading9">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                    Termination
+                    </button>
+                </h2>
+                </div>
+                <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                    We shall be entitled to terminate these terms and conditions and cease to provide you with any Services with immediate effect in the event that you:
+                    </p>
+                    <ul><li>
+                    fail to pay when due your Fees;</li><li>
+                    act in an aggressive, bullying, offensive, threatening or harassing manner towards any employee of TMHM Consulting Services Private Limited, any teacher or lecturer who provides the Online Courses or any student who attends any Online Course;
+                    </li><li>
+                    cheat or plagiarize any work which you are required to prepare or submit in connection with the Services or during any examination taken in connection with the Services;
+                    </li><li>
+                    steal or act in fraudulent or deceitful manner towards us or our employees or any other students who may be on our premises or attending our Online Courses
+                    </li><li>
+                    are in breach of these terms and conditions.
+                    </li><li>On termination clause 6 (liability), 7 (intellectual property rights), 8 (confidentiality) and 10 (restrictions) shall continue notwithstanding such termination.
+                    </li></ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card10">
+                <div class="card-header" id="heading10">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                    Assignments
+                    </button>
+                </h2>
+                </div>
+                <div id="collapse10" class="collapse" aria-labelledby="heading10" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Any Services provided by us under these terms and conditions are personal to you and cannot be transferred or assigned to any other person.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card11">
+                <div class="card-header" id="heading11">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                    Agreement
+                    </button>
+                </h2>
+                </div>
+                <div id="collapse11" class="collapse" aria-labelledby="heading11" data-parent="#accordionExample">
+                    <div class="card-body">
+                       <p>
+                    These terms and conditions are the entire agreement between the parties and supersede any prior agreements and arrangements, whether written or oral. 
+                    You confirm that you have not relied on any representations in entering into these and any other terms and conditions with us.  
+                    Nothing in this clause or terms and conditions shall limit liability for any fraudulent misrepresentation.
+                   </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card12">
+                <div class="card-header" id="heading12">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                    Data Protection
+                    </button>
+                </h2>
+                </div>
+                <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                    The nature of the Services provided by us means that we will obtain, use and disclose (together "Use") certain information about you ("Data"). This statement sets out the principles governing our Use of Data. By purchasing the Services you agree to this Use.
+                    </p><p>
+                    When you register with us you will need to provide certain Data such as your contact details and demographic information. We will store this Data and use it to contact you, provide you with details of the Services you have purchased and otherwise as required during the normal provision of the course.
+                    </p><p>
+                    We may also use the above Data, and similar Data you provide us in response to surveys, to aggregate user profiles and, unless you click on the relevant button on the Registration Form, provide you with communications. We will not pass any personal data onto anyone outside of TMHM Consulting Services Private Limited
+                    </p><p>
+                    We use information such as your User ID, session identifiers and password to enable us to identify whether you are using our services, assist with the provision of services and to ensure that you have access to relevant products. We will only read cookies from your cookie file placed there through your web browser's interaction with the Website.
+                    </p><p>
+                    TMHM Consulting Services Private Limited endeavour to take all reasonable steps to protect your personal Data including the use of encryption technology, but cannot guarantee the security of any Data you disclose. You accept the inherent security implications of being and transacting online over the internet and will not hold us responsible for any breach of security.
+                    </p><p>
+                    TMHM Consulting Services Private Limited may supplement the information that you provide with information we receive from third parties, such as exam registration bodies or your employer.
+                    </p><p>
+                    If you wish to change or update the data we hold about you, please e-mail <a href="mailto:info@tmhm.in">info@tmhm.in</a>
+                    or contact us on <a href="tel:+91 8179992806">+91 8179992806</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="card13">
+                <div class="card-header" id="heading13">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                    Notices
+                    </button>
+                </h2>
+                </div>
+                <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordionExample">
+                    <div class="card-body">
+                         <p>
+                    You can contact us by any of the following methods:
+                    </p><p>
+                    Email: <a href="mailto:info@tmhm.in">info@tmhm.in</a>
+                    </p><p>
+                    Telephone: <a href="tel:+91 8179992806">+91 8179992806</a>
+                    </p>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ********************* -->
+<div style="margin-bottom: 8em;"></div>
+<!-- Footer -->
+<footer class="page-footer font-small pt-4">
+    <div class="container text-center text-md-left">
+        <div class="row text-center text-md-left pb-3" style="background: transparent;">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <figure class="figure" style="margin: 11px;">
+                    <img src="{% static 'LandingPage/img/logotiny.png' %}" class="figure-img img-fluid rounded" alt="LearnOpad" style="margin-bottom: 0;width: 60px; height: 40px;">
+                    <figcaption class="figure-caption text-center">LearnOpad</figcaption>
+                </figure>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3" id="footer-left">
+                <p>
+                <a href="/aboutus">About Us</a>
+                </p>
+                <p>
+                <a href="#!">Career</a>
+                </p>
+                <p>
+                <a href="/contact">Contact Us</a>
+                </p>
+                <p>
+                <a href="/terms-and-services">Terms/Services</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto" id="footer-left">
+                <br>
+                <p>
+                <a href="/learner">Learners</a>
+                </p>
+                <p>
+                <a href="/facilitator">Facilitators</a>
+                </p>
+                <p>
+                <a href="/campus">Campus</a>
+                </p>
+                <p>
+                <a href="#!">Corporates</a>
+                </p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none">
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 social" id="footer-left">
+            <h6 class="text-uppercase font-weight-bold">Our App</h6>
+            <hr class="mb-2 mt-0 d-inline-block mx-auto" style="width: 20px;">
+            <p>
+            <a href="https://www.apple.com/ios/app-store/"><i class="fab fa-apple mr-1" style="font-size: 20px;"></i> IOS Store</a>
+            </p>
+            <p>
+            <a href="https://play.google.com/store"><img class="mr-1" src="{% static 'LandingPage/img/play-store.svg' %}" width="20px" height="20px"> Andriod Store</a>
+            </p>
+        </div>
+
+    </div>
+
+
+        <hr class="mb-4 mt-0 d-inline-block mx-auto text-sm-lef" style="width: 100%; height: 1px; background-color: #3db166;">
+
+        <div class="row d-flex align-items-center">
+
+        <div class="col-md-7 col-lg-8">
+            <p class="text-center text-md-left text-sm-left">© 2020 Copyright:
+            <a href="#" style="font-size:11px">
+                <strong> TMHM Consulting Services Pvt.Ltd</strong>
+            </a>
+            </p>
+        </div>
+        <div class="col-md-5 col-lg-4 ml-lg-0">
+            <div class="text-center text-md-right text-sm-left" id="social">
+
+            <ul class="list-unstyled list-inline">
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-wordpress-simple"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                </li>
+                <li class="list-inline-item">
+                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                </li>
+            </ul>
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/da956b6924.js" crossorigin="anonymous"></script>
+    <script src="{% static '/LandingPage/js/owl.carousel.js' %}"></script>
+
+    <script>
+
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+            });
+
+            $(".toggle-password").click(function() {
+
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+        });
+
+        function check_ephone(phno, email){
+            var regex = /^[0-9]{10}$/;
+            var regexe_email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(regex.test(phno.yourphone.value) && regex_email.test(email.youremail.value)){
+                return true;
+                } else {
+                    if (!(regex.test(phno.yourphone.value)) ) {
+                        alert("This is not a valid phone number");
+                        return false;
+                    }
+                    if (!(regex.test(email.youreamil.value)) ) {
+                        alert("This is not a valid email id");
+                        return false;
+                    }
+                    if (!(regex.test(phno.yourphone.value) && regex_email.test(email.youremail.value)) ) {
+                        alert("This is not a valid phone number and email id");
+                        return false;
+                    }
+            }
+        }
+    </script>
+</body>
+</html>
